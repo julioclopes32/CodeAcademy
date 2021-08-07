@@ -1,62 +1,67 @@
-# 2.2 - Project - Poem Fiasco
-In this project, changes have been made to a series of poems and you want to change them back.
+# 3.2 - Project - Birthday Party
+In this project, you’ll be using Git to make a 1-page website for your friend Kay’s birthday party.
 
-## Poem Fiasco
+## Birthday Party
 
-1. The file **road-not-taken.txt** doesn’t look right at all! Perhaps a rival poet snuck in and changed it while you were getting coffee. Good thing you’ve been committing often.
-- Checkout the ```HEAD``` version of **road-not-taken.txt** to discard changes made to the working directory.
-- Close and re-open the file to see the result.
+1. From the terminal, list the Git branches.
 
+2. Kay wasn’t sure where she wanted to host the party, so you made several Git branches to explore different locations.
 
-2. Now, finish the poem by adding a line. Here’s a suggestion:
+Some of the branches are no longer needed. Delete the following branches:
 ```
-And that has made all the difference.
+moma
+whitney 
+```
+You’ll need the ```-D``` option, because these feature branches were never merged into ```master```:
+```
+git branch -D branchname
+```
+
+3. Kay wants to see a version of the webpage that includes an unordered list with bullet points instead of a paragraph to show information about the party.
+
+Create a new branch called ```unordered-list``` and switch over to it.
+
+4. In index.html, replace:
+```
+<p>Description: Join Kay in celebrating their 29th birthday with free food and beverages, karaoke and a special appearance by Willy Nelson. Also, feel free to explore the Met museum before or after you stop by! Presents for Kay optional.</p>
+```
+with this unordered list:
+```
+<ul>
+    <li>Join Kay in celebrating their 29th birthday with free food and beverages</li>
+    <li>karaoke and a special appearance by Willy Nelson</li>
+    <li>explore the Met museum before or after you stop by!</li>
+    <li>Birthday presents optional</li>
+</ul>
+```
+Click Save.
+
+5. Add index.html to the staging area.
+
+6. Now make a commit.
+
+7. Kay approves the changes you made in the ```unordered-list``` branch.
+
+Switch over to ```master```. Then, merge ```unordered-list``` into ```master```. This will be a fast forward merge.
+
+8. Kay wants the heading to be way bigger. Create a new branch called ```big-heading```.
+
+9. Now, switch over the ```big-heading``` branch.
+
+To make the heading bigger, replace the line below:
+```
+<h1>Kay's Birthday Party</h1>
+```
+With this line:
+```
+<h1 style="font-size: 72px">Kay's Birthday Party</h1>
 ```
 Then click Save.
 
-3. Take a look at **oven-bird.txt** to see if it has also been tampered with.
-
-Indeed it has! We’ll want to discard changes in the working directory again.
-
-There’s a commonly used shortcut for this command:
-```
-git checkout -- filename 
-```
-It does the same exact thing that ```git checkout HEAD filename``` does. Try it with oven-bird.txt.
-
-4. Now, finish “Oven Bird” by adding a line. Here’s a suggestion:
-```
-Is what to make of a diminished thing.
-```
-Then click Save.
-
-5. Click on **fire-and-ice.txt.**
-
-This file has not been altered, but just to be sure, check the diff for this file.
-
-Then, add these last two lines to the poem:
-```
-Is also okay
-And would suffice.
-```
-6. Now that you’ve restored and completed **road-not-taken.txt** and **oven-bird.txt** and added a line to **fire-and-ice.txt**, add all three of the files to the staging area with a single command.
-
-7. **fire-and-ice.txt** could be better. Before you commit, remove this file from the staging area.
-
-8. Now that you’ve removed **fire-and-ice.txt**, make a commit.
-
-9. You get the crazy idea to change your poems in a big way.
-
-Make some drastic changes to each of the three poems. Remember to click Save after each file change.
-
-10. Now add all three files to the staging area.
+10. Add index.html to the staging area.
 
 11. Make a commit.
 
-12. A little later you take a look at the current state of your poems and regret your last commit.
+12. Kay approves of the giant heading!
 
-Reset your Git project to the commit before you made those drastic changes.
-
-13. There’s a problem: you reset ```HEAD``` to a previous commit, but the changes you want to get rid of are still in the working directory.
-
-What Git backtracking command that you already know can discard changes to the working directory, restoring the files to the way they look in the ```HEAD``` commit?
+Switch back over to the ```master``` branch. Then, merge ```big-heading``` into ```master```.

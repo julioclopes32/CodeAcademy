@@ -18,7 +18,6 @@ git branch new_branch
 ```
 Here ```new_branch``` would be the name of the new branch you create, like ```photos``` or ```blurb```. Be sure to name your branch something that describes the purpose of the branch. Also, branch names can’t contain whitespaces: ```new-branch``` and ```new_branch``` are valid branch names, but ```new branch``` is not.
 
-
 ## git checkout
 Great! You just created a new branch.
 
