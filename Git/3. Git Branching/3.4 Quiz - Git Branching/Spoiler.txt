@@ -1,13 +1,16 @@
-# 2.4 Quiz - How to Backtrack in Git
-Basic How to Backtrack in Git quiz.
+# 3.4 Quiz - Git Branching
+Basic Git Branching quiz.
 
 This is the Spoiler with the correct anshwers.
 
-Question 1 - d
-Question 2 - b
-Question 3 - b
-Question 4 - b
-Question 5 - d
-Question 6 - a
-Question 7 - b
-Question 8 - a
+Question 1 - B
+Question 2 - C
+Question 3 - C
+Question 4 - A
+Question 5 - A
+Question 6 - B
+Question 7 - B
+Question 8 - A
+Question 9 - A
+Question 10 - A
+Question 11 - A

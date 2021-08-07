@@ -1,105 +1,144 @@
-# 2.4 Quiz - How to Backtrack in Git
-Basic How to Backtrack in Git quiz.
+# 3.4 Quiz - Git Branching
+Basic Git Branching quiz.
 
 ## Question 1
 
-### Why use Git backtracking commands?
+### When you are on “master” and create a new branch
 
-- a. To go back to a previous commit
+- a. None of these
 
-- b. To discard changes in the working directory
+- b. The new branch and “master” share the exact same commit history
 
-- c. To unstage a file from the staging area
+- c. Every change you make to the new branch will also be made to “master”
 
-- d. All of these
+- d. The “git branch” command will not list the new branch
 
 ## Question 2
 
-### You accidentally deleted lines from a file. Which command can undo your mistake?
+### Merging a branch into “master”
 
-- a. git reset HEAD filename
+- a. Will always result in a merge conflict
 
-- b. git checkout HEAD filename
+- b. Integrates changes made to “master” into the new branch
 
-- c. git commit -m “message”
+- c. Integrates changes made on the new branch into “master”
 
-- d. git add filename
+- d. Cannot result in a merge conflict
 
 ## Question 3
 
-### What Git command gives the output below?
+### What does the command below accomplish?
 ```
-Unstaged changes after reset:              
-M       file.txt
+git branch -d my-branch
 ```
-- a. git status
+- a. It will create and switch the user to “my-branch”
 
-- b. git reset HEAD file.txt
+- b. This is invalid Git syntax
 
-- c. git delete filename
+- c. It will delete “my-branch”
 
-- d. git add file.txt
+- d. It will merge “my-branch” into “master”
 
 ## Question 4
 
-### In Git, the HEAD commit is:
+### The command below
+```
+git branch new_branch
+```
+- a. Creates a new branch
 
-- a. Code that runs before you checkout a commit
+- b. Lists the commit history of the new branch
 
-- b. The commit you are currently on
+- c. Changes the name of a branch
 
-- c. The default commit made during the “git init” command
-
-- d. The first commit deleted from a repository
+- d. Switches you over to a new branch
 
 ## Question 5
 
-### Which statement is true about the command below?
+### What does the code below indicate?
 ```
-git reset 844d1f7
+<<<<<<< HEAD -
+ Intuitive and easy to use, providing crucial functionality 
+======= 
+- Intuitive and fun for use, offering the best in software 
+>>>>>>> feature
 ```
-- a. The command will not work without the “-m” option
+- a. A merge conflict
 
-- b. The command will not work unless the SHA is in quotes
+- b. Git’s code syntax checker
 
-- c. It should be typed as “git 844d1f7 reset”
+- c. The output of “git status”
 
-- d. HEAD will be reset to the commit whose SHA starts with 844d1f7
+- d. A successful merge
 
 ## Question 6
 
-### Which Git command lets you view the SHAs of all previous commits?
+### A Git project has a branch “bug-fix”. How do you switch to it?
 
-- a. git log
+- a. git branch bug-fix
 
-- b. git status
+- b. git checkout bug-fix
 
-- c. git reset SHA 
+- c. git switch bug-switch
 
-- d. git checkout HEAD filename
+- d. git switch master bug-fix
 
 ## Question 7
 
-### Why use the command below?
-```
-git checkout HEAD filename
-```
-- a. To move HEAD to a previous commit
+### Which command will list all branches for a Git project?
 
-- b. To restore a file in the working directory to look as it did in your last commit
+- a. git checkout branchname
 
-- c. To remove a file from a previous commit
+- b. git branch
 
-- d. To unstage the file from the staging area
+- c. git list
+
+- d. git show branches
 
 ## Question 8
 
-### Which command removes file changes from the staging area?
+### You try to merge two branches which contain commits that alter a file in conflicting ways. This is called
 
-- a. git reset HEAD filename
+- a. A merge conflict
 
-- b. git checkout HEAD filename
+- b. A reset
 
-- c. git add filename_1 filename_2
+- c. A fast-forward merge
 
-- d. git reset SHA
+- d. None of these
+
+## Question 9
+
+### Which is a common reason Git users make a new branch?
+
+- a. To develop a new project feature
+
+- b. To duplicate “master” as a backup
+
+- c. In case a merge conflict can’t be resolved
+
+- d. To see if the branch has the same commit history as “master”
+
+## Question 10
+
+### You’ve merged a branch called “new-feature” into “master”. Which is true?
+
+- a. “master” is the receiver branch
+
+- b. “new-feature” is the receiver branch
+
+- c. “master” is the giver branch
+
+- d. “master” is the giver branch and “new-feature” is the receiver branch
+
+## Question 11
+
+### Why is the branch name “my branch” invalid?
+
+- a. Branch names cannot contain whitespace
+
+- b. The word “my” cannot be used
+
+- c. Branch names must be capitalized
+
+- d. Valid branch names must contain a dash
