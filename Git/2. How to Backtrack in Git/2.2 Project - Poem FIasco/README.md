@@ -1,64 +1,62 @@
-# 1.2 - Project - Manhattan Zoo
-In this project, you’ll use Git to keep track of meal guidelines for animals at the Manhattan Zoo.
+# 2.2 - Project - Poem Fiasco
+In this project, changes have been made to a series of poems and you want to change them back.
 
-## Manhattan Zoo
+## Poem Fiasco
 
-1. Initialize a new Git repository.
+1. The file **road-not-taken.txt** doesn’t look right at all! Perhaps a rival poet snuck in and changed it while you were getting coffee. Good thing you’ve been committing often.
+- Checkout the ```HEAD``` version of **road-not-taken.txt** to discard changes made to the working directory.
+- Close and re-open the file to see the result.
 
-2. Check the status of the repository.
 
-3. Add meal-regimens.txt to the staging area.
-
-4. Make a commit.
-
-5. Include this new info in meal-regimens.txt.
+2. Now, finish the poem by adding a line. Here’s a suggestion:
 ```
-3. Long-Tailed Chinchillas
-Meal: 1 bag animal pellets, 1 bag dried fruit, 1/2 bag cashews, 5 carrots, 3 stalks kale
-Times: 8:00 am
-Directions: disperse contents throughout Chinchilla habitat
+And that has made all the difference.
 ```
--
-Click Save.
+Then click Save.
 
-6. Add meal-regimens.txt to the staging area.
+3. Take a look at **oven-bird.txt** to see if it has also been tampered with.
 
-7. Check the status of the Git project.
+Indeed it has! We’ll want to discard changes in the working directory again.
 
-You should see meal-regimens.txt listed as “modified”.
-
-8. Make a commit.
-
-9. View your Git commit history.
-
-If your cursor is stuck in Git log mode, press “q” on your keyboard to escape.
-
-10. Here’s two more animal reports. Include each in meal-regimens.txt, making a new commit for each animal added.
+There’s a commonly used shortcut for this command:
 ```
-4. Poison Dart Frogs
-Meal: 1 bag small crickets
-Times: 6:00 am
-Directions: empty bag in frog habitat once daily. Do not touch frogs! Extremely poisonous.
- 
-5. Western Lowland Gorilla
-Meal: (Morning) 20 lbs. kale, 10 lbs. celery, 10 lbs. green beans, 5 lbs. carrots, 1 bag sweet potatoes. (Evening) 10 Bananas, 10 apples, 5 oranges, 5 mango, 20 lbs. grapes, 10 lbs. turnips, 5 lbs. white potatoes
-Times: 6:30 am, 12:00 pm, 7:00 pm
-Directions: feed Gorillas in the morning as group, spread forage items during noon meal, and divide quantities for individual feeding in evening
+git checkout -- filename 
 ```
+It does the same exact thing that ```git checkout HEAD filename``` does. Try it with oven-bird.txt.
 
-## Document Start - mel-regimens.txt
+4. Now, finish “Oven Bird” by adding a line. Here’s a suggestion:
 ```
-Manhattan Zoo
-Zookeeper Intern Onboarding:
-Meal Guidelines
-
-1. California Sea Lions
-Meal: 40 lbs. salmon, 40 lbs. herring, 20 lbs. Northern Anchovy, 20 lbs. Octupus
-Times: 6:00 am, 9:00 am, 12:00 pm, 3:00 pm, 6:00 pm, 9:00 pm
-Directions: Leave buckets for trainer at 12:00 pm and 3:00 pm, otherwise, follow standard protocol.
-
-2. Ring-tailed Lemurs
-Meal: 10 bags Tamarind pods
-Times: 6:00 am, 3:00 pm, 8:00 pm
-Directions: Empty bags over meadow area during designated times
+Is what to make of a diminished thing.
 ```
+Then click Save.
+
+5. Click on **fire-and-ice.txt.**
+
+This file has not been altered, but just to be sure, check the diff for this file.
+
+Then, add these last two lines to the poem:
+```
+Is also okay
+And would suffice.
+```
+6. Now that you’ve restored and completed **road-not-taken.txt** and **oven-bird.txt** and added a line to **fire-and-ice.txt**, add all three of the files to the staging area with a single command.
+
+7. **fire-and-ice.txt** could be better. Before you commit, remove this file from the staging area.
+
+8. Now that you’ve removed **fire-and-ice.txt**, make a commit.
+
+9. You get the crazy idea to change your poems in a big way.
+
+Make some drastic changes to each of the three poems. Remember to click Save after each file change.
+
+10. Now add all three files to the staging area.
+
+11. Make a commit.
+
+12. A little later you take a look at the current state of your poems and regret your last commit.
+
+Reset your Git project to the commit before you made those drastic changes.
+
+13. There’s a problem: you reset ```HEAD``` to a previous commit, but the changes you want to get rid of are still in the working directory.
+
+What Git backtracking command that you already know can discard changes to the working directory, restoring the files to the way they look in the ```HEAD``` commit?
