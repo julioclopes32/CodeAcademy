@@ -1,4 +1,4 @@
-# Manhattan Zoo
+# 1.2 - Project - Manhattan Zoo
 In this project, you’ll use Git to keep track of meal guidelines for animals at the Manhattan Zoo.
 
 ## Manhattan Zoo
