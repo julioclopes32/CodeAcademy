@@ -1,67 +1,44 @@
-# 3.2 - Project - Birthday Party
-In this project, you’ll be using Git to make a 1-page website for your friend Kay’s birthday party.
+# 4.2 - Project - JavaScript Homework
+In this project, we’ll be using Git to write comments on your student’s JavaScript homework. Don’t worry! You don’t need to know JavaScript to do the project.
 
-## Birthday Party
+## JavaScript Homework
 
-1. From the terminal, list the Git branches.
+1. There is a remote called **maryrose-hw** which contains your student’s JavaScript homework.
 
-2. Kay wasn’t sure where she wanted to host the party, so you made several Git branches to explore different locations.
+Clone the remote, giving it a name of your choice.
 
-Some of the branches are no longer needed. Delete the following branches:
+2. Use the terminal command ```cd``` to go into your cloned repository.
 ```
-moma
-whitney 
+cd my_clone
 ```
-You’ll need the ```-D``` option, because these feature branches were never merged into ```master```:
+Don’t forget to replace ```my_clone``` with the name you gave your clone in the previous step.
+
+3. Use the file navigator to open **homework.js** in the code editor.
+
+Be sure to open **homework.js** in your clone, not in the remote.
+
+4. From the terminal, create a new branch with Git. Your branch will be commenting on Mary Rose’s JavaScript homework, so name the branch appropriately.
+
+Next, switch over to your new branch.
+
+5. Time to start commenting on Mary Rose’s JavaScript homework.
+
+Comments are used to leave notes for other programmers or yourself. In JavaScript, you can make a single-line comment by typing // at the beginning of any line. Then type your comment. For example:
 ```
-git branch -D branchname
+// I'm a comment! 
 ```
+There are a number of comments already in **homework.js** to guide you.
 
-3. Kay wants to see a version of the webpage that includes an unordered list with bullet points instead of a paragraph to show information about the party.
+Make whatever comments you’d like to Mary Rose’s JavaScript homework. Then click Save.
 
-Create a new branch called ```unordered-list``` and switch over to it.
+6. Add your changes to the Git staging area.
 
-4. In **index.html**.html, replace:
+7. Now, make a commit.
+
+8. Push your branch up to the remote.
+
+9. Use:
 ```
-<p>Description: Join Kay in celebrating their 29th birthday with free food and beverages, karaoke and a special appearance by Willy Nelson. Also, feel free to explore the Met museum before or after you stop by! Presents for Kay optional.</p>
+cd ../maryrose-hw
 ```
-with this unordered list:
-```
-<ul>
-    <li>Join Kay in celebrating their 29th birthday with free food and beverages</li>
-    <li>karaoke and a special appearance by Willy Nelson</li>
-    <li>explore the Met museum before or after you stop by!</li>
-    <li>Birthday presents optional</li>
-</ul>
-```
-Click Save.
-
-5. Add **index.html**.html to the staging area.
-
-6. Now make a commit.
-
-7. Kay approves the changes you made in the ```unordered-list``` branch.
-
-Switch over to ```master```. Then, merge ```unordered-list``` into ```master```. This will be a fast forward merge.
-
-8. Kay wants the heading to be way bigger. Create a new branch called ```big-heading```.
-
-9. Now, switch over the ```big-heading``` branch.
-
-To make the heading bigger, replace the line below:
-```
-<h1>Kay's Birthday Party</h1>
-```
-With this line:
-```
-<h1 style="font-size: 72px">Kay's Birthday Party</h1>
-```
-Then click Save.
-
-10. Add **index.html**.html to the staging area.
-
-11. Make a commit.
-
-12. Kay approves of the giant heading!
-
-Switch back over to the ```master``` branch. Then, merge ```big-heading``` into ```master```.
+To change directories back to the remote. Use your Git knowledge to see the branch you just pushed.
