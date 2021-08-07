@@ -1,26 +1,36 @@
-# 3.3 - Project - Ruby Time Calculator
-In this project, you’ll have to resolve merge conflicts in two markdown files. Markdown is a file format that converts easily into HTML. You won’t have to write any markdown, just identify the differences between lines.
+# 4.3 - Project - Recipe Book
+In this project, you’ll be playing the role of two collaborators working on a recipe book.
 
-## Ruby Time Calculator
+## Recipe Book
 
-1. You are currently on ```master```.
+1. Go into the **veggie-favorites** remote by using the ```cd``` command:
+```
+cd veggie-favorites
+```
+2. Once inside **veggie-favorites** make a change to **chili.txt** and/or **squash-lasagna.txt** in the code editor.
 
-Merge the ```edits``` branch into the ```master``` branch.
+Click Save, add your changes to the Git staging area, and then make a commit.
 
-This will create two merge conflicts: **README.md** and examples.md.
+3. Go into your clone with:
+```
+cd ../veggie-clone
+```
 
-2. Using the file navigator, open **README.md** and examples.md. Identify the merge conflicts.
+4. Fetch all new work from the remote.
 
-3. In **README.md**, keep the file changes from the ```edits``` branch. Delete the file changes from ```HEAD```.
+5. Merge origin/master into your local master branch .
 
-Don’t forget to delete all of Git’s special markings that indicate a merge conflict.
+6. Create a new branch, then switch over to it to work on new-recipe.txt. The recipe can be whatever dish you’d like.
 Click Save.
 
-4. Add **README.md** to the staging area.
+7. Add your file changes to the staging area and make a commit.
 
-5. Follow the same order of actions as above for examples.md: keep the ```edits``` branch file changes and delete the ```HEAD``` changes.
-Click Save.
+8. Fetch one more time just for good measure (there won’t be a change).
 
-6. Add examples.md to the staging area and make a commit. Your commit message could be “Resolve merge conflict”.
+9. Push your branch up to the remote.
 
-7. Delete the ```edits``` branch.
+10. Navigate back to the remote with:
+```
+cd ../veggie-favorites
+```
+Confirm the presence of your new Git branch there.
