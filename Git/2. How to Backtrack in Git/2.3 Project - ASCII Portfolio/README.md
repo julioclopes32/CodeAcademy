@@ -1,7 +1,7 @@
-# 1.3 - Project - SnapFit Robots, Inc
-In this project, you will be working on assembly instructions for Snap-Fit Robots Inc., a build-it-yourself robot company.
+# 2.3 - Project - ASCII Portfolio
+In this project, you’ll use Git backtracking commands to undo mistakes made to an ASCII art portfolio!
 
-## SnapFit Robots, Inc
+## ASCII Portfolio
 
 1. Initialize a new Git project.
 
