@@ -1,144 +1,93 @@
-# 3.4 Quiz - Git Branching
-Basic Git Branching quiz.
+# 4.4 Quiz - Git Teamwork
+Basic Git Teamwork quiz.
 
 ## Question 1
 
-### When you are on “master” and create a new branch
+### Which command merges the remote “origin” into the local “master” branch?
 
-- a. None of these
+- a. git merge origin/master
 
-- b. The new branch and “master” share the exact same commit history
+- b. git merge master
 
-- c. Every change you make to the new branch will also be made to “master”
+- c. git push origin/master
 
-- d. The “git branch” command will not list the new branch
+- d. git remote -v
 
 ## Question 2
 
-### Merging a branch into “master”
+### What piece is missing from the command below?
+```
+git push origin
+```
+- a. The commit message of the commit you wish to push
 
-- a. Will always result in a merge conflict
+- b. The name of the branch you wish to push up to the remote
 
-- b. Integrates changes made to “master” into the new branch
+- c. The name of the collaborator you are working with
 
-- c. Integrates changes made on the new branch into “master”
-
-- d. Cannot result in a merge conflict
+- d. The name of the remote
 
 ## Question 3
 
-### What does the command below accomplish?
-```
-git branch -d my-branch
-```
-- a. It will create and switch the user to “my-branch”
+### What is a remote?
 
-- b. This is invalid Git syntax
+- a. A “backup” staging area
 
-- c. It will delete “my-branch”
+- b. A Git command which creates a clone
 
-- d. It will merge “my-branch” into “master”
+- c. A Git repository that allows multiple collaborators to work on the same Git project
+
+- d. An independent Git project where branch merges are disabled
 
 ## Question 4
 
-### The command below
+### The output below is typical of which command?
 ```
-git branch new_branch
+origin    /home/ccuser/workspace/curriculum/science-quizzes (fetch) 
+origin    /home/ccuser/workspace/curriculum/science-quizzes (push)
 ```
-- a. Creates a new branch
+- a. git fetch
 
-- b. Lists the commit history of the new branch
+- b. git merge origin/master
 
-- c. Changes the name of a branch
+- c. git status
 
-- d. Switches you over to a new branch
+- d. git remote -v
 
 ## Question 5
 
-### What does the code below indicate?
-```
-<<<<<<< HEAD -
- Intuitive and easy to use, providing crucial functionality 
-======= 
-- Intuitive and fun for use, offering the best in software 
->>>>>>> feature
-```
-- a. A merge conflict
+### The command “git fetch” does what?
 
-- b. Git’s code syntax checker
+- a. Pushes new commits to a remote repository
 
-- c. The output of “git status”
+- b. Changes the name of the remote
 
-- d. A successful merge
+- c. Fetches new commits from the remote, but does not merge them
+
+- d. Fetches new commits made on the remote branch, and merges them.
 
 ## Question 6
 
-### A Git project has a branch “bug-fix”. How do you switch to it?
+### After cloning a remote, what is the next step in the Git collaborative workflow?
 
-- a. git branch bug-fix
+- a. Push your branch up to the remote
 
-- b. git checkout bug-fix
+- b. Fetch from the remote and merge into the local “master” branch
 
-- c. git switch bug-switch
+- c. Delete your clone
 
-- d. git switch master bug-fix
+- d. Reset to a previous commit
 
 ## Question 7
 
-### Which command will list all branches for a Git project?
+### Which is true about the command below?
+```
+git clone remote_location clone_name
+```
+- a. None of these
 
-- a. git checkout branchname
+- b. The command clones a Git project
 
-- b. git branch
+- c. The clone automatically deletes the remote
 
-- c. git list
-
-- d. git show branches
-
-## Question 8
-
-### You try to merge two branches which contain commits that alter a file in conflicting ways. This is called
-
-- a. A merge conflict
-
-- b. A reset
-
-- c. A fast-forward merge
-
-- d. None of these
-
-## Question 9
-
-### Which is a common reason Git users make a new branch?
-
-- a. To develop a new project feature
-
-- b. To duplicate “master” as a backup
-
-- c. In case a merge conflict can’t be resolved
-
-- d. To see if the branch has the same commit history as “master”
-
-## Question 10
-
-### You’ve merged a branch called “new-feature” into “master”. Which is true?
-
-- a. “master” is the receiver branch
-
-- b. “new-feature” is the receiver branch
-
-- c. “master” is the giver branch
-
-- d. “master” is the giver branch and “new-feature” is the receiver branch
-
-## Question 11
-
-### Why is the branch name “my branch” invalid?
-
-- a. Branch names cannot contain whitespace
-
-- b. The word “my” cannot be used
-
-- c. Branch names must be capitalized
-
-- d. Valid branch names must contain a dash
+- d. The clone will not be connected to the remote
