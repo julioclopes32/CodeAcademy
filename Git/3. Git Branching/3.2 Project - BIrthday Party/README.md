@@ -21,7 +21,7 @@ git branch -D branchname
 
 Create a new branch called ```unordered-list``` and switch over to it.
 
-4. In index.html, replace:
+4. In **index.html**.html, replace:
 ```
 <p>Description: Join Kay in celebrating their 29th birthday with free food and beverages, karaoke and a special appearance by Willy Nelson. Also, feel free to explore the Met museum before or after you stop by! Presents for Kay optional.</p>
 ```
@@ -36,7 +36,7 @@ with this unordered list:
 ```
 Click Save.
 
-5. Add index.html to the staging area.
+5. Add **index.html**.html to the staging area.
 
 6. Now make a commit.
 
@@ -58,7 +58,7 @@ With this line:
 ```
 Then click Save.
 
-10. Add index.html to the staging area.
+10. Add **index.html**.html to the staging area.
 
 11. Make a commit.
 

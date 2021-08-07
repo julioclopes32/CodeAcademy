@@ -1,7 +1,7 @@
-# 2.3 - Project - ASCII Portfolio
+# 3.3 - Project - Ruby Time Calculator
 In this project, you’ll use Git backtracking commands to undo mistakes made to an ASCII art portfolio!
 
-## ASCII Portfolio
+## Ruby Time Calculator
 
 1. Initialize a new Git project.
 
