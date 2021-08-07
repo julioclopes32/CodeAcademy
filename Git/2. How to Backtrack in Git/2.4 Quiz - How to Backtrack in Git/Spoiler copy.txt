@@ -1,0 +1,13 @@
+# 2.4 Quiz - How to Backtrack in Git
+Basic How to Backtrack in Git quiz.
+
+This is the Spoiler with the correct anshwers.
+
+Question 1 - d
+Question 2 - b
+Question 3 - b
+Question 4 - b
+Question 5 - d
+Question 6 - a
+Question 7 - b
+Question 8 - a

@@ -1,120 +1,105 @@
-# 1.4 - Quiz - Basic Git Workflow
-Basic git Workflow quiz.
+# 2.4 Quiz - How to Backtrack in Git
+Basic How to Backtrack in Git quiz.
 
 ## Question 1
 
-### What’s wrong with the code below?
-```
-git commit -m Add new scene to screenplay
-```
-- a. The “-m” option is not necessary here
+### Why use Git backtracking commands?
 
-- b. The commit message should be in all caps
+- a. To go back to a previous commit
 
-- c. The “-m” option goes before the word “commit”
+- b. To discard changes in the working directory
 
-- d. The commit message lacks quotation marks
+- c. To unstage a file from the staging area
+
+- d. All of these
 
 ## Question 2
 
-### The output below is typical of which command?
-```
-commit bda95786432d142bbff996ad32045fa4f32ec619
-Author: codecademy <ccuser@codecademy.com>
-Date: on Nov 16 13:13:33 2015 -0500
-First commit
-```
-- a. git add filename
+### You accidentally deleted lines from a file. Which command can undo your mistake?
 
-- b. git status
+- a. git reset HEAD filename
 
-- c. git diff
+- b. git checkout HEAD filename
 
-- d. git log
+- c. git commit -m “message”
+
+- d. git add filename
 
 ## Question 3
 
-### In Git, a commit:
+### What Git command gives the output below?
+```
+Unstaged changes after reset:              
+M       file.txt
+```
+- a. git status
 
-- a. Saves every file in your working directory
+- b. git reset HEAD file.txt
 
-- b. Records only code with correct syntax
+- c. git delete filename
 
-- c. Permanently stores changes from the staging area in the repository
-
-- d. Temporarily stores changes from the staging area in the repository
+- d. git add file.txt
 
 ## Question 4
 
-### The command “git status” shows:
+### In Git, the HEAD commit is:
 
-- a. A Git project’s commit history
+- a. Code that runs before you checkout a commit
 
-- b. File changes staged for commit
+- b. The commit you are currently on
 
-- c. Untracked files only
+- c. The default commit made during the “git init” command
 
-- d. Untracked files and file changes staged for commit
+- d. The first commit deleted from a repository
 
 ## Question 5
 
-### What is the purpose of Git’s staging area?
+### Which statement is true about the command below?
+```
+git reset 844d1f7
+```
+- a. The command will not work without the “-m” option
 
-- a. To list notes about your project
+- b. The command will not work unless the SHA is in quotes
 
-- b. To list files you don’t want Git to track
+- c. It should be typed as “git 844d1f7 reset”
 
-- c. To show a list of your project’s commits
-
-- d. To stage file changes for a commit
+- d. HEAD will be reset to the commit whose SHA starts with 844d1f7
 
 ## Question 6
 
-### Where in Git do you typically create, edit, delete, and organize project files?
+### Which Git command lets you view the SHAs of all previous commits?
 
-- a. The initialize folder
+- a. git log
 
-- b. The staging area
+- b. git status
 
-- c. The .gitignore directory
+- c. git reset SHA 
 
-- d. The working directory
+- d. git checkout HEAD filename
 
 ## Question 7
 
-### What does “git init” do:
+### Why use the command below?
+```
+git checkout HEAD filename
+```
+- a. To move HEAD to a previous commit
 
-- a. Commit your files to the repository
+- b. To restore a file in the working directory to look as it did in your last commit
 
-- b. Add all files to the staging area
+- c. To remove a file from a previous commit
 
-- c. Initialize a new Git project
-
-- d. Delete a Git project
+- d. To unstage the file from the staging area
 
 ## Question 8
 
-### Why use Git?
+### Which command removes file changes from the staging area?
 
-- a. To provide “training wheels” for complex coding concepts
+- a. git reset HEAD filename
 
-- b. To secure a codebase against hackers
+- b. git checkout HEAD filename
 
-- c. To test proper syntax in your code
+- c. git add filename_1 filename_2
 
-- d. To keep track of changes made to a project over time
-
-## Question 9
-
-### In the code below, what will you replace “filename” with?
-```
-git add filename
-```
-
-- a. None of these
-
-- b. The name of the Git repository
-
-- c. The file you wish to remove from the working directory
-
-- d. The file you wish to add to the staging area
+- d. git reset SHA
