@@ -1,85 +1,85 @@
-# 2.1 Lesson - How to Backtrack
+# 3.1 Lesson - Git Branching
 
-## Backtracking Intro
-When working on a Git project, sometimes we make changes that we want to get rid of. Git offers a few eraser-like features that allow us to undo mistakes during project creation. In this lesson, we’ll learn some of these features.
+## git branch
+Up to this point, you’ve worked in a single Git branch called ```master```. Git allows us to create branches to experiment with versions of a project. Imagine you want to create version of a story with a happy ending. You can create a new branch and make the happy ending changes to that branch only. It will have no effect on the ```master``` branch until you’re ready to merge the happy ending to the master branch.
 
-## head commit
-In Git, the commit you are currently on is known as the ```HEAD``` commit. In many cases, the most recently made commit is the ```HEAD``` commit.
+In this lesson, we’ll be using Git branching to develop multiple versions of a resumé.
 
-To see the ```HEAD``` commit, enter:
+You can use the command below to answer the question: “which branch am I on?”
 ```
-git show HEAD
+git branch
 ```
-The output of this command will display everything the git log command displays for the ```HEAD``` commit, plus all the file changes that were committed.
+## git branch 2
+Right now, the Git project has only one branch: ```master```.
+
+To create a new branch, use:
+```
+git branch new_branch
+```
+Here ```new_branch``` would be the name of the new branch you create, like ```photos``` or ```blurb```. Be sure to name your branch something that describes the purpose of the branch. Also, branch names can’t contain whitespaces: ```new-branch``` and ```new_branch``` are valid branch names, but ```new branch``` is not.
+
 
 ## git checkout
-What if you decide to change a file in the working directory, but then decide you wanted to discard that change?
+Great! You just created a new branch.
 
-You could rewrite the line how it was originally, but what if you forgot the exact wording? The command
+The ```master``` and ```fencing``` branches are identical: they share the same exact commit history. You can switch to the new branch with
 ```
-git checkout HEAD filename
+git checkout branch_name
 ```
-will restore the file in your working directory to look exactly as it did when you last made a commit.
-
-Here, ```filename``` again is the actual name of the file. If the file is named **changes.txt**, the command would be
+Here, ```branch_name``` is the name of the branch. If the branch’s name is skill
 ```
-git checkout HEAD changes.txt
+git checkout skill
 ```
+Once you switch branches, you will now be able to make commits on the branch that have no impact on ```master```.
 
-## more git add
-In Git, it’s common to change many files, add those files to the staging area, and commit them to a repository in a single commit.
+You can continue your workflow, while ```master``` stays intact!
 
-For example, say you want to change the character “LARRY” to “LAERTES” in the script. The name currently appears in two files. After you change the name in both files, you could add the changed files to the staging area with:
-
-git add filename_1 filename_2
-Note the word filename above refers to the name of the file you are adding to the staging area, such as scene-3.txt.
-
-## git reset I
-Great! The files you’ve added to the staging area belong in the same commit.
-
-What if, before you commit, you accidentally delete an important line from filename_1? Unthinkingly, you add filename_1 to the staging area. The file change is unrelated to the changes you made and you don’t want to include it in the commit.
-
-We can unstage that file from the staging area using
+## git merge
+What if you wanted include all the changes made to the ```fencing``` branch on the ```master``` branch? We can easily accomplish this by merging the branch into master with:
 ```
-git reset HEAD filename
+git merge branch_name
 ```
-This command resets the file in the staging area to be the same as the ```HEAD``` commit. It does not discard file changes from the working directory, it just removes them from the staging area.
-
-## git reset II
-Creating a project is like hiking in a forest. Sometimes you take a wrong turn and find yourself lost.
-
-Just like retracing your steps on that hike, Git enables you to rewind to the part before you made the wrong turn. You can do this with:
+For example, if I wanted to merge the skills branch to ```master```, I would enter
 ```
-git reset commit_SHA
+git merge skills
 ```
-This command works by using the first 7 characters of the SHA of a previous commit. For example, if the SHA of the previous commit is ```5d692065cf51a2f50ea8e7b19b5a7ae512f633ba```, use:
+In a moment, you’ll merge branches. Keep in mind:
+
+- Your goal is to update ```master``` with changes you made to ```fencing```.
+- ```fencing``` is the giver branch, since it provides the changes.
+- ```master``` is the receiver branch, since it accepts those changes.
+
+## merge conflict I
+The merge was successful because ```master``` had not changed since we made a commit on ```fencing```. Git knew to simply update ```master``` with changes on ```fencing```.
+
+What would happen if you made a commit on ```master``` before you merged the two branches? Furthermore, what if the commit you made on ```master``` altered the same exact text you worked on in ```fencing```? When you switch back to ```master``` and ask Git to merge the two branches, Git doesn’t know which changes you want to keep. This is called a *merge* conflict.
+
+## merge conflict II
+Let’s say you decide you’d like to merge the changes from ```fencing``` into ```master```.
+
+Here’s where the trouble begins!
+
+You’ve made commits on separate branches that alter the same line in conflicting ways. Now, when you try to merge ```fencing``` into ```master```, Git will not know which version of the file to keep.
+
+## delete branch
+In Git, branches are usually a means to an end. You create them to work on a new project feature, but the end goal is to merge that feature into the ```master``` branch. After the branch has been integrated into ```master```, it has served its purpose and can be deleted.
+
+The command
 ```
-git reset 5d69206
+git branch -d branch_name
 ```
-```HEAD``` is now set to that previous commit.
+will delete the specified branch from your Git project.
 
-## git reset review
-To better understand ```git reset commit_SHA```, notice the diagram on the right. Each circle represents a commit.
+Now that ```master``` contains all the file changes that were in ```fencing```, let’s delete ```fencing```.
 
-Before reset:
+## eneralizations
+Let’s take a moment to review the main concepts and commands from the lesson before moving on.
 
-```HEAD``` is at the most recent commit
-After resetting:
+- Git branching allows users to experiment with different versions of a project by checking out separate branches to work on.
+The following commands are useful in the Git branch workflow.
 
-```HEAD``` goes to a previously made commit of your choice
-The gray commits are no longer part of your project
-You have in essence rewound the project’s history
-
-## Generalizations
-Congratulations! You’ve learned three different ways to backtrack in Git. You can use these skills to undo changes made to your Git project.
-
-Let’s take a moment to review the new commands:
-
-- ```git checkout HEAD filename```: Discards changes in the working directory.
-- ```git reset HEAD filename```: Unstages file changes in the staging area.
-- ```git reset commit_SHA```: Resets to a previous commit in your commit history.
-
-Additionally, you learned a way to add multiple files to the staging area with a single command:
-```
-git add filename_1 filename_2
-```
+- ```git branch```: Lists all a Git project’s branches.
+- ```git branch branch_name```: Creates a new branch.
+- ```git checkout branch_name```: Used to switch from one branch to another.
+- ```git merge branch_name```: Used to join file changes from one branch to another.
+- ```git branch -d branch_name```: Deletes the branch specified.
