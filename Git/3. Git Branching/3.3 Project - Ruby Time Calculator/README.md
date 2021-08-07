@@ -1,41 +1,26 @@
 # 3.3 - Project - Ruby Time Calculator
-In this project, you’ll use Git backtracking commands to undo mistakes made to an ASCII art portfolio!
+In this project, you’ll have to resolve merge conflicts in two markdown files. Markdown is a file format that converts easily into HTML. You won’t have to write any markdown, just identify the differences between lines.
 
 ## Ruby Time Calculator
 
-1. Initialize a new Git project.
+1. You are currently on ```master```.
 
-2. Check the status of the Git project.
+Merge the ```edits``` branch into the ```master``` branch.
 
-You will see multiple files listed in the output as “Untracked”.
+This will create two merge conflicts: **README.md** and examples.md.
 
-3. Add each file to the Git staging area.
+2. Using the file navigator, open **README.md** and examples.md. Identify the merge conflicts.
 
-4. Check the status of the Git project again.
+3. In **README.md**, keep the file changes from the ```edits``` branch. Delete the file changes from ```HEAD```.
 
-5. Make a commit.
-
-6. View your Git commit log.
-
-If your cursor is stuck in Git log mode, press “q” on your keyboard to escape.
-
-7. Include this line in disclaimer.txt:
-```
-Warning: For best battery life, do not leave robot battery charging overnight.
-```
+Don’t forget to delete all of Git’s special markings that indicate a merge conflict.
 Click Save.
 
-8. Add the file to the staging area.
+4. Add **README.md** to the staging area.
 
-9. Now make a commit.
+5. Follow the same order of actions as above for examples.md: keep the ```edits``` branch file changes and delete the ```HEAD``` changes.
+Click Save.
 
-10. View your Git commit log again to identify your commit.
+6. Add examples.md to the staging area and make a commit. Your commit message could be “Resolve merge conflict”.
 
-11. Revise each file in whatever ways you’d like. Then add your changes to the staging area and make another commit.
-
-## Document Start - disclaimer.txt
-```
-SNAPFIT ROBOTS PRODUCT DISCLAIMER
-
-Your Snapfit Robot Model i075 is provided with guarantee of limited 1-year warranty only. Outside of maintenance and malfunction descriptions covered in the warranty, customer shall make no claims of any kind, either express or implied, including but not limited to warranties of sellability, fitness for specific usage, of title, or of noninfringement of third and fourth party rights, and/or rights to attend robot parties. Use of the product by uninformed user is at the user’s risk.
-```
+7. Delete the ```edits``` branch.
