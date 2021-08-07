@@ -1,84 +1,83 @@
-# 3.1 Lesson - Git Branching
+# 4.1 Lesson - Git Teamwork
 
-## git branch
-Up to this point, you’ve worked in a single Git branch called ```master```. Git allows us to create branches to experiment with versions of a project. Imagine you want to create version of a story with a happy ending. You can create a new branch and make the happy ending changes to that branch only. It will have no effect on the ```master``` branch until you’re ready to merge the happy ending to the master branch.
+## Overview
+So far, we’ve learned how to work on Git as a single user. Git also offers a suite of collaboration tools to make working with others on a project easier.
 
-In this lesson, we’ll be using Git branching to develop multiple versions of a resumé.
+Imagine that you’re a science teacher, developing some quizzes with Sally, another teacher in the school. You are using Git to manage the project.
 
-You can use the command below to answer the question: “which branch am I on?”
-```
-git branch
-```
-## git branch 2
-Right now, the Git project has only one branch: ```master```.
+In order to collaborate, you and Sally need:
+- A complete replica of the project on your own computers
+- A way to keep track of and review each other’s work
+- Access to a definitive project version
+You can accomplish all of this by using remotes. A remote is a shared Git repository that allows multiple collaborators to work on the same Git project from different locations. Collaborators work on the project independently, and merge changes together when they are ready to do so.
 
-To create a new branch, use:
+## git clone
+Sally has created the remote repository, **science-quizzes** in the directory **curriculum**, which teachers on the school’s shared network have access to. In order to get your own replica of **science-quizzes**, you’ll need to clone it with:
 ```
-git branch new_branch
+git clone remote_location clone_name
 ```
-Here ```new_branch``` would be the name of the new branch you create, like ```photos``` or ```blurb```. Be sure to name your branch something that describes the purpose of the branch. Also, branch names can’t contain whitespaces: ```new-branch``` and ```new_branch``` are valid branch names, but ```new branch``` is not.
+In this command:
+- ```remote_location``` tells Git where to go to find the remote. This could be a web address, or a filepath, such as:
+```
+/Users/teachers/Documents/some-remote
+```
+- ```clone_name``` is the name you give to the directory in which Git will clone the repository.
 
-## git checkout
-Great! You just created a new branch.
+## git remote -v
+Nice work! We have a clone of Sally’s remote on our computer. One thing that Git does behind the scenes when you clone **science-quizzes** is give the remote address the name *origin*, so that you can refer to it more conveniently. In this case, Sally’s remote is *origin*.
 
-The ```master``` and ```fencing``` branches are identical: they share the same exact commit history. You can switch to the new branch with
+You can see a list of a Git project’s remotes with the command:
 ```
-git checkout branch_name
+git remote -v
 ```
-Here, ```branch_name``` is the name of the branch. If the branch’s name is skill
-```
-git checkout skill
-```
-Once you switch branches, you will now be able to make commits on the branch that have no impact on ```master```.
+## git fetch
+After you cloned **science-quizzes**, you had to run off to teach a class. Now that you’re back at your computer, there’s a problem: what if, while you were teaching, Sally changed the **science-quizzes** Git project in some way. If so, your clone will no longer be up-to-date.
 
-You can continue your workflow, while ```master``` stays intact!
+An easy way to see if changes have been made to the remote and bring the changes down to your local copy is with:
+```
+git fetch
+```
+This command will not *merge* changes from the remote into your local repository. It brings those changes onto what’s called a remote *branch*.
 
 ## git merge
-What if you wanted include all the changes made to the ```fencing``` branch on the ```master``` branch? We can easily accomplish this by merging the branch into master with:
+Even though Sally’s new commits have been fetched to your local copy of the Git project, those commits are on the ```origin/master``` branch. Your local ```master``` branch has not been updated yet, so you can’t view or make changes to any of the work she has added.
+
+In Lesson III, Git Branching we learned how to merge branches. Now we’ll use the ```git merge``` command to integrate ```origin/master``` into your local ```master``` branch. The command:
 ```
-git merge branch_name
+git merge origin/master
 ```
-For example, if I wanted to merge the skills branch to ```master```, I would enter
+will accomplish this for us.
+
+## Git workflow
+When you’ve merged ```origin/master``` into your local ```master``` branch, you’re ready to contribute some work of your own. The workflow for Git collaborations typically follows this order:
+
+1. Fetch and merge changes from the remote
+2. Create a branch to work on a new project feature
+3. Develop the feature on your branch and commit your work
+4. Fetch and merge from the remote again (in case new commits were made while you were working)
+5. Push your branch up to the remote for review
+
+Steps 1 and 4 are a safeguard against *merge conflicts*, which occur when two branches contain file changes that cannot be merged with the ```git merge``` command. Step 5 involves ```git push```.
+
+## git push
+Now it’s time to share our work.
+
+The command:
 ```
-git merge skills
+git push origin your_branch_name
 ```
-In a moment, you’ll merge branches. Keep in mind:
+will push your branch up to the remote, ```origin```. From there, Sally can review your branch and merge your work into the ```master``` branch, making it part of the definitive project version.
 
-- Your goal is to update ```master``` with changes you made to ```fencing```.
-- ```fencing``` is the giver branch, since it provides the changes.
-- ```master``` is the receiver branch, since it accepts those changes.
+## generalizations
+Congratulations, you now know enough to start collaborating on Git projects! Let’s review.
 
-## merge conflict I
-The merge was successful because ```master``` had not changed since we made a commit on ```fencing```. Git knew to simply update ```master``` with changes on ```fencing```.
+- A remote is a Git repository that lives outside your Git project folder. Remotes can live on the web, on a shared network or even in a separate folder on your local computer.
+- The Git Collaborative Workflow are steps that enable smooth project development when multiple collaborators are working on the same Git project.
+We also learned the following commands:
 
-What would happen if you made a commit on ```master``` before you merged the two branches? Furthermore, what if the commit you made on ```master``` altered the same exact text you worked on in ```fencing```? When you switch back to ```master``` and ask Git to merge the two branches, Git doesn’t know which changes you want to keep. This is called a *merge* conflict.
-
-## merge conflict II
-Let’s say you decide you’d like to merge the changes from ```fencing``` into ```master```.
-
-Here’s where the trouble begins!
-
-You’ve made commits on separate branches that alter the same line in conflicting ways. Now, when you try to merge ```fencing``` into ```master```, Git will not know which version of the file to keep.
-
-## delete branch
-In Git, branches are usually a means to an end. You create them to work on a new project feature, but the end goal is to merge that feature into the ```master``` branch. After the branch has been integrated into ```master```, it has served its purpose and can be deleted.
-
-The command
-```
-git branch -d branch_name
-```
-will delete the specified branch from your Git project.
-
-Now that ```master``` contains all the file changes that were in ```fencing```, let’s delete ```fencing```.
-
-## eneralizations
-Let’s take a moment to review the main concepts and commands from the lesson before moving on.
-
-- Git branching allows users to experiment with different versions of a project by checking out separate branches to work on.
-The following commands are useful in the Git branch workflow.
-
-- ```git branch```: Lists all a Git project’s branches.
-- ```git branch branch_name```: Creates a new branch.
-- ```git checkout branch_name```: Used to switch from one branch to another.
-- ```git merge branch_name```: Used to join file changes from one branch to another.
-- ```git branch -d branch_name```: Deletes the branch specified.
+- ```git clone```: Creates a local copy of a remote.
+- ```git remote -v```: Lists a Git project’s remotes.
+- ```git fetch```: Fetches work from the remote into the local copy.
+- ```git merge origin/master```: Merges ```origin/master``` into your local branch.
+- ```git push origin <branch_name>```: Pushes a local branch to the ```origin``` remote.
+Git projects are usually managed on Github, a website that hosts Git projects for millions of users. With Github you can access your projects from anywhere in the world by using the basic workflow you learned here.
