@@ -1,12 +1,14 @@
 <!--
 1.
-In index.html, transform the image on your page into a link by wrapping the image element with an anchor element. 
-Set the target attribute so that the link opens in a new window.
+Under the <h1> element that says The Brown Bear, create an unordered list with the following three list items:
 
-Your image element should be a nested tag inside your anchor element.
+Introduction
+Habitat
+Media
 
-Use the same URL as before:
-https://en.wikipedia.org/wiki/Brown_bear
+2.
+Wrap the text of each list item in the unordered list in an anchor element. 
+Each anchor tag should link to the corresponding <div> on the page (The <a> element that contains the text “Introduction” links to #introduction).
 
 -->
 <!--
@@ -17,14 +19,14 @@ https://en.wikipedia.org/wiki/Brown_bear
     <title>Brown Bears</title>
   </head>
   <body>
-    <a href="./index.html">Brown Bear</a>
+    <a href="./08-14.html">Brown Bear</a>
     <a href="./aboutme.html">About Me</a>
     <h1>The Brown Bear</h1>
     <div id="introduction">
       <h2>About Brown Bears</h2>
       <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the
         Atlas bear and the Himalayan brown bear.</p>
-      <a target = "_blank" href="https://en.wikipedia.org/wiki/Brown_bear">Learn More</a>
+      <a href="https://en.wikipedia.org/wiki/Brown_bear" target = "_blank">Learn More</a>
       <h3>Species</h3>
       <ul>
         <li>Arctos</li>
@@ -48,7 +50,9 @@ https://en.wikipedia.org/wiki/Brown_bear
     </div>
     <div id="media">
       <h2>Media</h2>
-      <img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg" />
+      <a href="https://en.wikipedia.org/wiki/Brown_bear">
+        <img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg" />
+      </a>
       <video src="https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" width="320" height="240" controls>Video not supported</video>
     </div>
   </body>
@@ -66,6 +70,11 @@ https://en.wikipedia.org/wiki/Brown_bear
     <a href="./08-14.html">Brown Bear</a>
     <a href="./aboutme.html">About Me</a>
     <h1>The Brown Bear</h1>
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#habitat">Habitat</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
     <div id="introduction">
       <h2>About Brown Bears</h2>
       <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the

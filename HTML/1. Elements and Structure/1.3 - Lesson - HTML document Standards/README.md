@@ -80,4 +80,56 @@ Thankfully, HTML allows you to turn nearly any element into a link by wrapping t
 ```
 In the example above, an image of a prickly pear has been turned into a link by wrapping the outside of the ```<img>``` element with an ```<a>``` element.
 
-## 
+## Linking to Same Page
+How do we make it easier for a user to jump to different portions of our page?
+When users visit our site, we want them to be able to click a link and have the page automatically scroll to a specific section.
+In order to link to a target on the same page, we must give the target an id, like this:
+```
+<p id="top">This is the top of the page!</p>
+<h1 id="bottom">This is the bottom! </h1>
+```
+The target link is a string containing the # character and the target element’s id.
+```
+<ol>
+  <li><a href="#top">Top</a></li>
+  <li><a href="#bottom">Bottom</a></li>
+</ol>
+```
+
+## Whitespace
+The rest of this lesson will focus on some tools developers use to make code easier to interpret.
+As the code in an HTML file grows, it becomes increasingly difficult to keep track of how elements are related. Programmers use two tools to visualize the relationship between elements: whitespace and indentation.
+What makes the example below difficult to read?
+```
+<body><p>Paragraph 1</p><p>Paragraph 2</p></body>
+```
+You have to read the entire line to know what elements are present. Compare the example above to this:
+```
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+</body>
+```
+This example is easier to read, because each element is on its own line.
+
+## Comments
+HTML files also allow you to add comments to your code.
+
+Comments begin with ```<!--``` and end with ```-->```. Any characters in between will be ignored by your browser.
+```
+<!-- This is a comment that the browser will not display. -->
+```
+## HTML Tags
+You now know all of the basic elements and set-up you need to structure an HTML page and add different types of content. With the help of CSS, very soon you’ll be creating beautiful websites!
+
+1. The ```<!DOCTYPE html>``` declaration should always be the first line of code in your HTML files. This lets the browser know what version of HTML to expect.
+2. The ```<html>``` element will contain all of your HTML code.
+3. Information about the web page, like the title, belongs within the ```<head>``` of the page.
+4. You can add a title to your web page by using the ```<title>``` element, inside of the head.
+5. A webpage’s title appears in a browser’s tab.
+6. Anchor tags (```<a>```) are used to link to internal pages, external pages or content on the same page.
+7. You can create sections on a webpage and jump to them using ```<a>``` tags and adding ids to the elements you wish to jump to.
+8. Whitespace between HTML elements helps make code easier to read while not changing how elements appear in the browser.
+9. Indentation also helps make code easier to read. It makes parent-child relationships visible.
+10. Comments are written in HTML using the following syntax: ```<!--``` comment ```-->```.
+Take some time to edit the workspace you created and observe how it changes!
