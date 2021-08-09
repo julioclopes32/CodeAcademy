@@ -175,6 +175,6 @@ ______________                              ______________
 
 - b. The myVid.mp4 video source (src=) is not valid.
 
-- c. The video element is not a self-closing tag. It should have an opening and a closing tag.   
+- c. The video element is not a self-closing tag. It should have an opening and a closing tag.
 
 - d. A valid self-closing tag ends with />.
