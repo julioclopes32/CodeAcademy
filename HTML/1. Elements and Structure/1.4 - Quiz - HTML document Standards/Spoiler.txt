@@ -1,18 +1,17 @@
-# 1.2 - Quiz - HTML document standards
+# 1.4 - Quiz - HTML document standards
 Basic HTML document standards quiz.
 
 This is the Spoiler with the correct anshwers.
 
-Question 1 - 
-Question 2 - 
-Question 3 - 
-Question 4 - 
-Question 5 - 
-Question 6 - 
-Question 7 - 
-Question 8 - 
-Question 9 - 
-Question 10 - 
-Question 11 - 
-Question 12 - 
-Question 13 - 
+Question 1 - d
+Question 2 - a
+Question 3 - d
+Question 4 - a
+Question 5 - c 
+Question 6 - d
+Question 7 - d 
+Question 8 - d 
+Question 9 - b
+Question 10 - d
+Question 11 - d
+Question 12 - a

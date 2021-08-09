@@ -96,7 +96,7 @@ The target link is a string containing the # character and the target element’
 </ol>
 ```
 
-## Whitespace
+## Whitespace or Identation
 The rest of this lesson will focus on some tools developers use to make code easier to interpret.
 As the code in an HTML file grows, it becomes increasingly difficult to keep track of how elements are related. Programmers use two tools to visualize the relationship between elements: whitespace and indentation.
 What makes the example below difficult to read?

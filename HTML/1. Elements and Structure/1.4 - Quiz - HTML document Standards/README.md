@@ -3,178 +3,151 @@ Basic HTML document standards quiz.
 
 ## Question 1
 
-### The abbreviation HTML stands for which of the following?
+### Why should the document type declaration be included in all HTML documents?
 
-- a. HyperText Markdown Language
+- a. To specify what content will display in the browser
 
-- b. HyperText Markup Language  
+- b. Without it, any HTML code is invalid.
 
-- c. HyperTransfer Markdown Language
+- c. Without it, the web page will not be allowed on the Internet.
 
-- d. HyperTransfer Markup Language
+- d. To specify the HTML standard being used in the content     
 
 ## Question 2
 
-### What HTML code will most web browsers display as italics?
+### The following code creates a link to another page. Which of the following will cause the page to open in a new browser window?
+```
+<a href="https://www.codecademy.com/">Codecademy</a>
+```
+- a. Add the ```target``` attribute, with its value set to ```_blank```.    
 
-- a. ```<div>```Hello```</div>```
+- b. The URL should include “new_window” at the end of it.
 
-- b. ```<em>```Hello```</em>```  
+- c. Single quotation marks should be used instead of double quotation marks.
 
-- c. ```<strong>```Hello```</strong>```
-
-- d. ```<p>```Hello```</p>```
+- d. Wrap the ```<a>``` tag with a ```<window>``` tag.
 
 ## Question 3
 
-### What is the correct definition of an HTML element?
+### Which of the following is the current HTML standard?
 
-- a. The second, or closing, HTML tag. Closing tags have a forward slash (/) inside of them.
+- a. HTML1
 
-- b. The first, or opening, HTML tag.
+- b. XHTML
 
-- c. HTML code that does not require opening or closing tags.
+- c. CSS
 
-- d. An HTML tag and the content that it contains or marks up.  
+- d. HTML5    
 
 ## Question 4
 
-### Which of the following tags would contain the HTML for a web page’s visible content?
+### The contents of the <title> tag will appear where in a modern browser?
 
-- a. ```<body>```   
+- a. The browser’s tab     
 
-- b. ```<about>```
+- b. The first line of the web page
 
-- c. ```<cont>```
+- c. The last line of the webpage
 
-- d. ```<html>```
+- d. It does not appear anywhere. Its purpose is to inform search engines.
 
 ## Question 5
 
-### The following code results in no visible output to the browser. Why?
-```
-<ol>
- 
-</ol> 
-```
-- a. The ```<ol>``` tag signifies “old” information, meaning the contents will never display.
+### Which of the following tags instructs the browser to expect a well-formed HTML document?
 
-- b. The ```<ol>``` tag must be replaced with a ```<ul>``` tag.
+- a. ```<head>```    
 
-- c. List items must be added to the list.    
+- b. ```<div>```
 
-- d. ```<ol>``` is not a valid HTML element.
+- c. ```<!DOCTYPE html>```    
+
+- d. ```<body>```    
 
 ## Question 6
 
-### Match the blanks with the proper syntax to create an HTML paragraph element from this text.
-______________                              ______________
-|____________|  I'm ready to rock and roll! |____________|
+### All HTML code must be nested within which of the following tags?
 
-```
-<p>I'm ready to rock and roll!</p>
-```
+- a. ```<body>```    
+
+- b. ```<title>```
+
+- c. ```<head>```
+
+- d. ```<html>```     
 
 ## Question 7
 
-### Which element is the parent of ```<p>My Paragraph</p>```?
+### The following code is supposed to create a link to another web page, but fails to do so. Why?
 ```
-<body>
-  <p>Paragraph 1</p>
-  <div>
-    <a href="http://www.codecademy.com">Codecademy</a>
-    <p>My Paragraph</p>
-  </div>
-</body>
+<a>Codecademy</a> 
 ```
-- a. ```<div>```   
 
-- b. ```<a>```
+- a. The word “Codecademy” should be replaced with the URL to the Codecademy website.
 
-- c. ```<p>```
+- b. The ```<a>``` closing tag should be removed.
 
-- d. ```<body>```
+- c. The ```<a>``` element should be replaced with a ```<link>``` element.
+
+- d. The ```<a>``` element is missing the href attribute set to the URL of the Codecademy website.    
 
 ## Question 8
 
-### Which of the following elements will directly affect the vertical spacing in an HTML layout?
+Which of the following elements contains a web page’s metadata?
 
-- a. ```<break />```   
+- a. ```<html>```    
 
-- b. ```<break>```
+- b. ```<body>```
 
-- c. ```<br>```   
+- c. ```<about>```
 
-- d. ```<b>```
+- d. ```<head>```     
 
 ## Question 9
 
-### Which of the following is the correct syntax for the paragraph HTML element?
+### Which of the following would create a link to a local HTML file called aboutme.html?
 
-- a. ```<p/>I am a paragraph<p>```   
+- a. ```<a href="https://www.aboutme.com/">About Me</a>```   
 
-- b. ```<p>I am a paragraph</p>```   
+- b. ```<a href="./aboutme.html">About Me</a>```   
 
-- c. ```<p>I am a paragraph<p/>```  
+- c. ```<a href="./aboutme.html" />```  
 
-- d. ```<p>I am a paragraph<\p>```
+- d. ```<a href="https://www.aboutme.com/" />```
 
 ## Question 10
 
-### The following code is supposed to display an image, but fails to do so. Why?
-```
-<img https://www.example.com/laptop.jpg />
-```
+### Which of the following is the correct syntax for a comment in HTML?
 
-- a. The ```<img>``` tag should be replaced with an ```<image>``` tag.
+- a. # Comment, here
 
-- b. The image URL should be all uppercase.
+- b. <-- I'm a comment -->
 
-- c. The ```<img>``` tag can only display .png or .svg image formats.
+- c. // I'm definitely a comment
 
-- d. The src attribute is missing and must be set equal to the image URL, enclosed in double quotation marks.      
+- d. ```<!-- No, pretty sure I'm a comment -->```   
 
 ## Question 11
 
-### Which of the following is valid HTML for the heading tag with the smallest size and lowest rank in the hierarchy?
+### The following HTML code should only exist within which of the following tags?
+```
+<title>Codecademy</title> 
+```
+- a. ```<body>```    
 
-- a. ```<h3>```    
+- b. ```<!DOCTYPE html>```
 
-- b. ```<h1>```
+- c. ```<h1>```
 
-- c. ```<h9>```
-
-- d. ```<h6>```    
+- d. ```<head>```    
 
 ## Question 12
 
-### How would the output of the code below change if <ul> and </ul> were changed to <ol> and </ol>, respectively?
-```
-<ul>
-  <li>Lorem</li>
-  <li>Ipsum</li>
-  <li>Horribilis</li>
-</ul>
-```
-- a. Bullet points in the output would change to numbers.   
+### What is the purpose of indentation and whitespace?
 
-- b. The code would no longer output any visible content in the browser.
+- a. To make code in an HTML file more readable. 
 
-- c. Numbers in the output would change to bullet points.
+- b. To make sure the browser correctly interprets nested elements in an HTML file.
 
-- d. No changes to the output would occur.
+- c. To change the display of elements in the browser.
 
-## Question 13
-
-### Why is the code below incorrect?
-```
-<video src="myVid.mp4" controls >
-```
-
-- a. The width and height of the video must be specified.
-
-- b. The myVid.mp4 video source (src=) is not valid.
-
-- c. The video element is not a self-closing tag. It should have an opening and a closing tag.
-
-- d. A valid self-closing tag ends with />.
+- d. To comment out code you don’t need.
