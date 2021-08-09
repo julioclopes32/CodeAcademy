@@ -3,12 +3,16 @@ Basic HTML quiz.
 
 This is the Spoiler with the correct anshwers.
 
-Question 1 - d
-Question 2 - d
-Question 3 - c
-Question 4 - d
-Question 5 - d
-Question 6 - d
-Question 7 - c
-Question 8 - d
-Question 9 - d
+Question 1 - b
+Question 2 - b
+Question 3 - d
+Question 4 - a
+Question 5 - c
+Question 6 - -
+Question 7 - a
+Question 8 - c
+Question 9 - b
+Question 10 - d
+Question 11 - d
+Question 12 - a
+Question 13 - c

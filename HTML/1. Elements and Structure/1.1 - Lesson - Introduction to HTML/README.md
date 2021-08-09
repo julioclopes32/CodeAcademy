@@ -101,9 +101,9 @@ The ```<ul>``` element should not hold raw text and won’t automatically format
 ```
 
 ## Ordered Lists
-Ordered lists (<ol>) are like unordered lists, except that each list item is numbered. They are useful when you need to list different steps in a process or rank items for first to last.
+Ordered lists (```<ol>```) are like unordered lists, except that each list item is numbered. They are useful when you need to list different steps in a process or rank items for first to last.
 
-You can create the ordered list with the <ol> tag and then add individual list items to the list using <li> tags.
+You can create the ordered list with the ```<ol>``` tag and then add individual list items to the list using ```<li>``` tags.
 ```
 <ol>
   <li>Preheat the oven to 350 degrees.</li>

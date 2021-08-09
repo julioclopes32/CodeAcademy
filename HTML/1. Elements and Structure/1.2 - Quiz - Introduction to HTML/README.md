@@ -3,118 +3,178 @@ Basic HTML quiz.
 
 ## Question 1
 
-### What’s wrong with the code below?
-```
-git commit -m Add new scene to screenplay
-```
-- a. The “-m” option is not necessary here
+### The abbreviation HTML stands for which of the following?
 
-- b. The commit message should be in all caps
+- a. HyperText Markdown Language
 
-- c. The “-m” option goes before the word “commit”
+- b. HyperText Markup Language  
 
-- d. The commit message lacks quotation marks
+- c. HyperTransfer Markdown Language
+
+- d. HyperTransfer Markup Language
 
 ## Question 2
 
-### The output below is typical of which command?
-```
-commit bda95786432d142bbff996ad32045fa4f32ec619
-Author: codecademy <ccuser@codecademy.com>
-Date: on Nov 16 13:13:33 2015 -0500
-First commit
-```
-- a. git add filename
+### What HTML code will most web browsers display as italics?
 
-- b. git status
+- a. ```<div>```Hello```</div>```
 
-- c. git diff
+- b. ```<em>```Hello```</em>```  
 
-- d. git log
+- c. ```<strong>```Hello```</strong>```
+
+- d. ```<p>```Hello```</p>```
 
 ## Question 3
 
-### In Git, a commit:
+### What is the correct definition of an HTML element?
 
-- a. Saves every file in your working directory
+- a. The second, or closing, HTML tag. Closing tags have a forward slash (/) inside of them.
 
-- b. Records only code with correct syntax
+- b. The first, or opening, HTML tag.
 
-- c. Permanently stores changes from the staging area in the repository
+- c. HTML code that does not require opening or closing tags.
 
-- d. Temporarily stores changes from the staging area in the repository
+- d. An HTML tag and the content that it contains or marks up.  
 
 ## Question 4
 
-### The command “git status” shows:
+### Which of the following tags would contain the HTML for a web page’s visible content?
 
-- a. A Git project’s commit history
+- a. ```<body>```   
 
-- b. File changes staged for commit
+- b. ```<about>```
 
-- c. Untracked files only
+- c. ```<cont>```
 
-- d. Untracked files and file changes staged for commit
+- d. ```<html>```
 
 ## Question 5
 
-### What is the purpose of Git’s staging area?
+### The following code results in no visible output to the browser. Why?
+```
+<ol>
+ 
+</ol> 
+```
+- a. The ```<ol>``` tag signifies “old” information, meaning the contents will never display.
 
-- a. To list notes about your project
+- b. The ```<ol>``` tag must be replaced with a ```<ul>``` tag.
 
-- b. To list files you don’t want Git to track
+- c. List items must be added to the list.    
 
-- c. To show a list of your project’s commits
-
-- d. To stage file changes for a commit
+- d. ```<ol>``` is not a valid HTML element.
 
 ## Question 6
 
-### Where in Git do you typically create, edit, delete, and organize project files?
+### Match the blanks with the proper syntax to create an HTML paragraph element from this text.
+______________                              ______________
+|____________|  I'm ready to rock and roll! |____________|
 
-- a. The initialize folder
-
-- b. The staging area
-
-- c. The .gitignore directory
-
-- d. The working directory
+```
+<p>I'm ready to rock and roll!</p>
+```
 
 ## Question 7
 
-### What does “git init” do:
+### Which element is the parent of ```<p>My Paragraph</p>```?
+```
+<body>
+  <p>Paragraph 1</p>
+  <div>
+    <a href="http://www.codecademy.com">Codecademy</a>
+    <p>My Paragraph</p>
+  </div>
+</body>
+```
+- a. ```<div>```   
 
-- a. Commit your files to the repository
+- b. ```<a>```
 
-- b. Add all files to the staging area
+- c. ```<p>```
 
-- c. Initialize a new Git project
-
-- d. Delete a Git project
+- d. ```<body>```
 
 ## Question 8
 
-### Why use Git?
+### Which of the following elements will directly affect the vertical spacing in an HTML layout?
 
-- a. To provide “training wheels” for complex coding concepts
+- a. ```<break />```   
 
-- b. To secure a codebase against hackers
+- b. ```<break>```
 
-- c. To test proper syntax in your code
+- c. ```<br>```   
 
-- d. To keep track of changes made to a project over time
+- d. ```<b>```
 
 ## Question 9
 
-### In the code below, what will you replace “filename” with?
+### Which of the following is the correct syntax for the paragraph HTML element?
+
+- a. ```<p/>I am a paragraph<p>```   
+
+- b. ```<p>I am a paragraph</p>```   
+
+- c. ```<p>I am a paragraph<p/>```  
+
+- d. ```<p>I am a paragraph<\p>```
+
+## Question 10
+
+### The following code is supposed to display an image, but fails to do so. Why?
 ```
-git add filename
+<img https://www.example.com/laptop.jpg />
 ```
 
-- a. None of these
+- a. The ```<img>``` tag should be replaced with an ```<image>``` tag.
 
-- b. The name of the Git repository
+- b. The image URL should be all uppercase.
 
-- c. The file you wish to remove from the working directory
+- c. The ```<img>``` tag can only display .png or .svg image formats.
 
-- d. The file you wish to add to the staging area
+- d. The src attribute is missing and must be set equal to the image URL, enclosed in double quotation marks.      
+
+## Question 11
+
+### Which of the following is valid HTML for the heading tag with the smallest size and lowest rank in the hierarchy?
+
+- a. ```<h3>```    
+
+- b. ```<h1>```
+
+- c. ```<h9>```
+
+- d. ```<h6>```    
+
+## Question 12
+
+### How would the output of the code below change if <ul> and </ul> were changed to <ol> and </ol>, respectively?
+```
+<ul>
+  <li>Lorem</li>
+  <li>Ipsum</li>
+  <li>Horribilis</li>
+</ul>
+```
+- a. Bullet points in the output would change to numbers.   
+
+- b. The code would no longer output any visible content in the browser.
+
+- c. Numbers in the output would change to bullet points.
+
+- d. No changes to the output would occur.
+
+## Question 13
+
+### Why is the code below incorrect?
+```
+<video src="myVid.mp4" controls >
+```
+
+- a. The width and height of the video must be specified.
+
+- b. The myVid.mp4 video source (src=) is not valid.
+
+- c. The video element is not a self-closing tag. It should have an opening and a closing tag.   
+
+- d. A valid self-closing tag ends with />.
