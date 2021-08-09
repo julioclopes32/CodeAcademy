@@ -3,16 +3,12 @@ Basic HTML Tables quiz.
 
 This is the Spoiler with the correct anshwers.
 
-Question 1 - 
-Question 2 - 
-Question 3 - 
-Question 4 - 
-Question 5 - 
-Question 6 - 
-Question 7 - 
-Question 8 - 
-Question 9 - 
-Question 10 - 
-Question 11 - 
-Question 12 - 
-Question 13 - 
+Question 1 - a
+Question 2 - a
+Question 3 - b
+Question 4 - c
+Question 5 - d
+Question 6 - d
+Question 7 - b
+Question 8 - c
+Question 9 - d

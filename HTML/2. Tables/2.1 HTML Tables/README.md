@@ -172,7 +172,7 @@ In the last exercise, the table’s headings were kept inside of the table’s b
 ```
 
 ## Table Footer
-The bottom part of a long table can also be sectioned off using the <tfoot> element.
+The bottom part of a long table can also be sectioned off using the ```<tfoot>``` element.
 ```
 <table>
   <thead>
