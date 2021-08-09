@@ -1,123 +1,47 @@
-# 2.2 - Quiz - HTML Tables
-Basic HTML Tables quiz.
+# 2.3 - Project - Wine Festival Schedule
+The Aguillar Family is hosting their annual wine festival and they have asked you to build a web page for the event schedule! Use your knowledge of HTML to display a table to the attendees.
 
-## Question 1
+1. In index.html, inside of the ```<div>``` element that has the attribute class with a value of "container", create a new ```<table>``` element.
 
-### Which of the following tags is used to separate the body of the table from its headers and footers?
+2. Inside of the ```<table>``` element, add a section for table headings using ```<thead>```.
 
-- a. ```<tbody></tbody>```    c
+Then, add two rows inside of it using the table row element.
 
-- b. ```<tr></tr>```
+3. Inside the first table row element, from task 2, add a table heading element.
 
-- c. ```<thead></thead>```
+Inside of that, include an ```<h1>``` with the following text: Wine Festival Schedule.
 
-- d. ```<th></th>```
+4. Inside the second table row element, from task 2, add two ```<th>```s:
 
-## Question 2
+In the first, add an ```<h2>``` that says Time.
 
-### Which tag adds new data to an HTML table?
+In the second, add an ```<h2>``` that says Event.
 
-- a. ```<td></td>```    c
+5. You may notice that “Wine Festival Schedule” does not stretch across the entire table. Let’s fix that!
 
-- b. ```<tr></tr>```
+In the opening ```<th>``` tag of this element, add colspan="2".
 
-- c. ```<table></table>```
+6. Below the closing ```</thead>``` tag, section off the table using the table body element.
 
-- d. ```<tb></tb>```
+7. Inside of the table body you created in the previous task, create 5 rows using the table row element.
 
-## Question 3
+8. Inside each row, create two cells using the table data element.
 
-### What does the following code do?
-```
-<tr>
-  <td colspan="2">Out of Town</td>
-  <td>Back in Town</td>
-</tr>
-```
-- a. It creates a cell that will span two rows.
+The first table data in each row should have the attribute ```class``` with the value ```"left"```.
 
-- b. It creates a cell that will span two columns and a cell that will span a single column.   c
+9. Inside each of the 5 ```<td class="left">``` elements, add ```<h3>``` elements that include the times of the events:
+- 12:00 PM
+- 01:00 PM
+- 02:00 PM
+- 03:00 PM
+- 04:00 PM
+Feel free to look back at the live site to compare.
 
-- c. It will make all cells in that row span two columns.
+10. Inside each of the ```<td>``` elements that does not have a ```class``` attribute with a value of ```"left"```, add ```<h3>``` elements that include the name of events:
 
-- d. Adds a 1 pixel black border around the cells of the table.
-
-## Question 4
-
-### What does the following CSS code add?
-```
-td, tr {
-  border: 1px solid black;
-}
- 
-th {
-  border: 1px solid blue;
-}
-```
-- a. 1 pixel black border to the table body.  
-
-- b. 1 pixel blue border to rows and cells. 1 pixel black border to headers.
-
-- c. 1 pixel black border to rows and cells. 1 pixel blue border to headers.  c
-
-- d. 1 pixel blue border to the table footer.
-
-## Question 5
-
-### Which of the following tags is used to enclose the row of a table containing its headers?
-
-- a. ```<tbody></tbody>```    
-
-- b. ```<th></th>```
-
-- c. ```<tr></tr>```
-
-- d. ```<thead></thead>```   c
-
-## Question 6
-
-### Which of the following tags is used to separate the footer of the table from its body?
-
-- a. ```<tbody></tbody>```    
-
-- b. ```<th></th>```
-
-- c. ```<footer></footer>```
-
-- d. ```<tfoot></tfoot>```   c
-
-## Question 7
-
-### Which tag should surround an entire table of data?
-
-- a. ```<td></td>```    
-
-- b. ```<table></table>```      c
-
-- c. ```<tr></tr>```
-
-- d. ```<thead></thead>```   
-
-## Question 8
-
-### Which tag creates new rows in an HTML table?
-
-- a. ```<table></table>```    
-
-- b. ```<td></td>```       
-
-- c. ```<tr></tr>```      c
-
-- d. ```<thead></thead>``` 
-
-## Question 9
-
-### Which tag adds a new row header to an HTML table?
-
-- a. ```<th></ht>```    
-
-- b. ```<tr></tr>```       
-
-- c. ```<th scope="col"></th>```      
-
-- d. ```<th scope="row"></th>```  c
+- Welcome Reception
+- Storytelling & Tasting
+- Wine Luncheon
+- Aguillar Family Wines
+- Wine & Cheese Tasting
+You have created the events table. Cheers!
