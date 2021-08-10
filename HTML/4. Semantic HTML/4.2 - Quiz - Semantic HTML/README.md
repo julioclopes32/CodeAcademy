@@ -1,123 +1,107 @@
-# 2.2 - Quiz - HTML Tables
-Basic HTML Tables quiz.
+# 4.2 - Quiz - Semantic HTML
+Basic Semantic HTML quiz.
 
 ## Question 1
 
-### Which of the following tags is used to separate the body of the table from its headers and footers?
+### Why is the code below incorrect?
+```
+<audio src="AudioFile.mp3"/>
+```
+- a. ```src``` is only for video and embed, while source is used for audio files.
 
-- a. ```<tbody></tbody>```    c
+- b. The code does not specify the type using ```type=```.
 
-- b. ```<tr></tr>```
+- c. ```<audio>``` is not a self closing tag and requires an opening and closing tag. 
 
-- c. ```<thead></thead>```
-
-- d. ```<th></th>```
+- d. The controls attribute was not included in the code.
 
 ## Question 2
 
-### Which tag adds new data to an HTML table?
+### Why is the <div> tag not semantic?
 
-- a. ```<td></td>```    c
+- a. It requires a closing tag.
 
-- b. ```<tr></tr>```
+- b. It can be used multiple times throughout the code.
 
-- c. ```<table></table>```
+- c. It provides no context as to what the content is inside of the tag.
 
-- d. ```<tb></tb>```
+- d. It provides context as to what content is inside of the tag.
 
 ## Question 3
 
-### What does the following code do?
+### Add the correct type of semantic tag:
 ```
-<tr>
-  <td colspan="2">Out of Town</td>
-  <td>Back in Town</td>
-</tr>
+<section>
+  <h2>cars<h2>
+   ___________
+  |___________|
+  <p>
+A car is so much more than a number, and yet enthusiasts and non-enthusiasts alike simply cannot resist the urge to brag or judge another’s wheels based on specifications alone.
+  </p>
+   ___________
+  |___________|
+</section>
 ```
-- a. It creates a cell that will span two rows.
-
-- b. It creates a cell that will span two columns and a cell that will span a single column.   c
-
-- c. It will make all cells in that row span two columns.
-
-- d. Adds a 1 pixel black border around the cells of the table.
 
 ## Question 4
 
-### What does the following CSS code add?
+### Why is the code below incorrect?
 ```
-td, tr {
-  border: 1px solid black;
-}
- 
-th {
-  border: 1px solid blue;
-}
+<figcaption>
+  <img src="sunset.jpg">
+  <figure>Beautiful sunset</figure>
+</figcaption>
 ```
-- a. 1 pixel black border to the table body.  
+- a. ```<img>``` requires a closing tag.
 
-- b. 1 pixel blue border to rows and cells. 1 pixel black border to headers.
+- b. Only ```<embed>``` can work with ```<figure>``` and ```<figcaption>```.
 
-- c. 1 pixel black border to rows and cells. 1 pixel blue border to headers.  c
+- c. The ```<figure>``` tag must be replaced with ```<caption>```.
 
-- d. 1 pixel blue border to the table footer.
+- d. The use of ```<figure>``` and ```<figcaption>``` needs to be reversed.        
 
 ## Question 5
 
-### Which of the following tags is used to enclose the row of a table containing its headers?
+### What’s the difference between <embed> and <video>?
 
-- a. ```<tbody></tbody>```    
+- a. ```<video>``` is a semantic element while ```<embed>``` is not.
 
-- b. ```<th></th>```
+- b. ```<embed>``` does not support video while ```<video>``` does.
 
-- c. ```<tr></tr>```
+- c. ```<video>``` can only be used for video , while ```<embed>``` can be used for any type of media.   
 
-- d. ```<thead></thead>```   c
+- d. ```<embed>``` is used in the header of the document while ```<video>``` can be used anywhere.
 
 ## Question 6
 
-### Which of the following tags is used to separate the footer of the table from its body?
-
-- a. ```<tbody></tbody>```    
-
-- b. ```<th></th>```
-
-- c. ```<footer></footer>```
-
-- d. ```<tfoot></tfoot>```   c
+### Which semantic tags complete the code?
+```
+  <section>
+    <p>
+A robot is a machine designed to complete tasks faster, quicker, and more accurately than a human.
+    </p>
+  </section>
+   ___________
+  |___________|
+    <p>
+“We're going to become caretakers for the robots. That's what the next generation of work is going to be.”- Gray Scott
+    </p>
+   ___________
+  |___________|
+```
 
 ## Question 7
 
-### Which tag should surround an entire table of data?
+### Which code snippet is the correct way to rewrite this in Semantic HTML?
+```
+<div id="header">
+  <h1>Codecademy</h1>
+</div>
+```
+- a. ```<header><h1>Codecademy<h1><header>```    
 
-- a. ```<td></td>```    
+- b. ```<header><h1>Codecademy</h1></header>```      
 
-- b. ```<table></table>```      c
+- c. ```<h1>Codecademy</h1>```
 
-- c. ```<tr></tr>```
-
-- d. ```<thead></thead>```   
-
-## Question 8
-
-### Which tag creates new rows in an HTML table?
-
-- a. ```<table></table>```    
-
-- b. ```<td></td>```       
-
-- c. ```<tr></tr>```      c
-
-- d. ```<thead></thead>``` 
-
-## Question 9
-
-### Which tag adds a new row header to an HTML table?
-
-- a. ```<th></ht>```    
-
-- b. ```<tr></tr>```       
-
-- c. ```<th scope="col"></th>```      
-
-- d. ```<th scope="row"></th>```  c
+- d. ```<head><h1>Codecademy</h1></head>```   

@@ -23,5 +23,5 @@ Why use Semantic HTML?
 - **Easy to Understand**: Semantic HTML also makes the website’s source code easier to read for other web developers.
 
 To better understand this, you can think of comparing non-semantic HTML to going into a store with no signs on the aisles. Since the aisles aren’t labeled, you don’t know what products are in those aisles. However, stores that do have signs for each aisle make it a lot easier to find the items you need, just like Semantic HTML.
-<br>
+</br>
 <img src="Semantic.png" alt="Semantic"/>

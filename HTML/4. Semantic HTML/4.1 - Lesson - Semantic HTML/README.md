@@ -1,4 +1,4 @@
-# 4.1 Lesson - Semantic HTML
+# 4.1 - Lesson - Semantic HTML
 When building web pages, we use a combination of non-semantic HTML and Semantic HTML. The word semantic means “relating to meaning,” so semantic elements provide information about the content between the opening and closing tags.
 
 ## Header
