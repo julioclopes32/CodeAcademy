@@ -1,0 +1,198 @@
+# 1.2 - Lesson - Selectors
+In this lesson, you’ll learn how to set up your CSS Selectors.
+
+## Type
+Remember that declarations are a fundamental part of CSS because they apply a style to a selected element. But how do you decide which elements will get the style? With a selector.
+A selector is used to target the specific HTML element(s) to be styled by the declaration. One selector you may already be familiar with is the type selector. Just like its name suggests, the type selector matches the type of the element in the HTML document.
+
+Some important notes on the type selector:
+- The type selector does not include the angle brackets.
+- Since element types are often referred to by their opening tag name, the type selector is sometimes referred to as the tag name or element selector.
+
+## Universal
+You learned how the type selector selects all elements of a given type. Well, the universal selector selects all elements of any type.
+The universal selector uses the * character in the same place where you specified the type selector in a ruleset, like so:
+```
+* { 
+  font-family: Verdana;
+}
+```
+In the code above, every text element on the page will have its font changed to ```Verdana```.
+
+## Class
+CSS is not limited to selecting elements by their type. As you know, HTML elements can also have attributes. When working with HTML and CSS a class attribute is one of the most common ways to select an element.
+
+For example, consider the following HTML:
+```
+<p class='brand'>Sole Shoe Company</p>
+```
+The paragraph element in the example above has a class attribute within the opening tag of the```<p>``` element. The class attribute is set to 'brand'. To select this element using CSS, we can create a ruleset with a class selector of .brand.
+```
+.brand {
+ 
+}
+```
+
+## Multiple Classes
+We can use CSS to select an HTML element’s class attribute by name. And so far, we’ve selected elements using only one class name per element. If every HTML element had a single class, all the style information for each element would require a new class.
+
+Luckily, it’s possible to add more than one class name to an HTML element’s class attribute.
+
+For instance, perhaps there’s a heading element that needs to be green and bold. You could write two CSS rulesets like so:
+```
+.green {
+  color: green;
+}
+ 
+.bold {
+  font-weight: bold;
+}
+```
+Then, you could include both of these classes on one HTML element like this:
+```
+<h1 class='green bold'> ... </h1>
+```
+We can add multiple classes to an HTML element’s class attribute by separating them with a space. This enables us to mix and match CSS classes to create many unique styles without writing a custom class for every style combination needed.
+
+## ID
+Oftentimes it’s important to select a single element with CSS to give it its own unique style. If an HTML element needs to be styled uniquely, we can give it an ID using the id attribute.
+```
+<h1 id='large-title'> ... </h1>
+```
+In contrast to ```class``` which accepts multiple values, and can be used broadly throughout an HTML document, an element’s id can only have a single value, and only be used once per page.
+
+To select an element’s ID with CSS, we prepend the ```id``` name with a number sign (```#```). For instance, if we wanted to select the HTML element in the example above, it would look like this:
+```
+#large-title {
+ 
+}
+```
+The ```id``` name is ```large-title```, therefore the CSS selector for it is ```#large-title```.
+
+## Attribute
+You may remember that some HTML elements use attributes to add extra detail or functionality to the element. Some familiar attributes may be href and src, but there are many more—including class and id!
+
+The attribute selector can be used to target HTML elements that already contain attributes. Elements of the same type can be targeted differently by their attribute or attribute value. This alleviates the need to add new code, like the class or id attributes.
+Attributes can be selected similarly to types, classes, and IDs.
+```
+[href]{
+   color: magenta;
+}
+```
+And it can get more granular from there by adding type and/or attribute values. One way is by using type[attribute*=value]. In short, this code selects an element where the attribute contains any instance of the specified value. Let’s take a look at an example.
+```
+<img src='/images/seasons/cold/winter.jpg'>
+<img src='/images/seasons/warm/summer.jpg'>
+```
+The HTML code above renders two ```<img>``` elements, each containing a src attribute with a value equaling a link to an image file.
+```
+img[src*='winter'] {
+  height: 50px;
+}
+ 
+img[src*='summer'] {
+  height: 100px;
+}
+```
+Now take a look at the above CSS code. The attribute selector is used to target each image individually.
+
+- The first ruleset looks for an img element with an attribute of src that contains the string 'winter', and sets the height to 50px.
+- The second ruleset looks for an img element with an attribute of src that contains the string 'summer', and sets the height to 100px.
+Notice how no new HTML markup (like a class or id) needed to be added, and we were still able to modify the styles of each image independently. This is one advantage to using the attribute selector!
+
+## Pseudo-class
+You may have observed how the appearance of certain elements can change, or be in a different state, after certain user interactions. For instance:
+
+When you click on an ```<input>``` element, and a blue border is added showing that it is in focus.
+When you click on a blue ```<a>``` link to visit to another page, but when you return the link’s text is purple.
+When you’re filling out a form and the submit button is grayed out and disabled. But when all of the fields have been filled out, the button has color showing that it’s active.
+These are all examples of pseudo-class selectors in action! In fact, :focus, :visited, :disabled, and :active are all pseudo-classes. Factors such as user interaction, site navigation, and position in the DOM can all give elements a different state with pseudo-class.
+
+A pseudo-class can be attached to any selector. It is always written as a colon : followed by a name. For example p:hover.
+```
+p:hover {
+  background-color: lime;
+}
+```
+In the above code, whenever the mouse hovers over a paragraph element, that paragraph will have a lime-colored background.
+
+## Specificity
+Specificity is the order by which the browser decides which CSS styles will be displayed. A best practice in CSS is to style elements while using the lowest degree of specificity so that if an element needs a new style, it is easy to override.
+ID >> classes >> type.
+IDs are the most specific selector in CSS, followed by classes, and finally, type. For example, consider the following HTML and CSS:
+```
+<h1 class='headline'>Breaking News</h1>
+h1 {
+  color: red;
+}
+ 
+.headline {
+  color: firebrick;
+}
+```
+In the example code above, the color of the heading would be set to firebrick.
+
+## Chaining
+When writing CSS rules, it’s possible to require an HTML element to have two or more CSS selectors at the same time.
+
+This is done by combining multiple selectors, which we will refer to as chaining. For instance, if there was a special class for ```<h1>``` elements, the CSS would look like below:
+```
+h1.special {
+ 
+}
+```
+The code above would select only the ```<h1>``` elements with a class of special. If a ```<p>``` element also had a class of special, the rule in the example would not style the paragraph.
+
+## Descendant Combinator
+In addition to chaining selectors to select elements, CSS also supports selecting elements that are nested within other HTML elements, also known as descendants. For instance, consider the following HTML:
+```
+<ul class='main-list'>
+  <li> ... </li>
+  <li> ... </li>
+  <li> ... </li>
+</ul>
+```
+The nested ```<li>``` elements are descendants of the ```<ul>``` element and can be selected with the descendant combinator like so:
+
+.main-list li {
+ 
+}
+In the example above, .main-list selects the element with the.main-list class (the ```<ul>``` element). The descendant ```<li>```‘s are selected by adding li to the selector, separated by a space. This results in .main-list li as the final selector.
+
+Selecting elements in this way can make our selectors even more specific by making sure they appear in the context we expect.
+
+## Chaining and Specificity
+In the last exercise, instead of selecting all ```<h5>``` elements, you selected only the ```<h5>``` elements nested inside the .description elements. This CSS selector was more specific than writing only h5. Adding more than one tag, class, or ID to a CSS selector increases the specificity of the CSS selector.
+
+For instance, consider the following CSS:
+```
+p {
+  color: blue;
+}
+ 
+.main p {
+  color: red;
+}
+```
+Both of these CSS rules define what a ```<p>``` element should look like. Since .main p has a class and a p type as its selector, only the ```<p>``` elements inside the .main element will appear red.
+
+## Multiple Selectors
+In order to make CSS more concise, it’s possible to add CSS styles to multiple CSS selectors all at once. This prevents writing repetitive code.
+For instance, the following code has repetitive style attributes:
+```
+h1 {
+  font-family: Georgia;
+}
+ 
+.menu {
+  font-family: Georgia;
+}
+```
+Instead of writing font-family: Georgia twice for two selectors, we can separate the selectors by a comma to apply the same style to both, like this:
+```
+h1, 
+.menu {
+  font-family: Georgia;
+}
+```
+By separating the CSS selectors with a comma, both the ```<h1>``` elements and the elements with the menu class will receive the font-family: Georgia styling.
