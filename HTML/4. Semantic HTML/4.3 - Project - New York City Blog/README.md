@@ -1,4 +1,4 @@
-# 2.3 - Project - Wine Festival Schedule
+# 4.3 - Project - New York City Blog
 The Aguillar Family is hosting their annual wine festival and they have asked you to build a web page for the event schedule! Use your knowledge of HTML to display a table to the attendees.
 
 1. In index.html, inside of the ```<div>``` element that has the attribute class with a value of "container", create a new ```<table>``` element.
