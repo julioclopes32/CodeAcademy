@@ -5,4 +5,92 @@ There are different types of validation. One type is server-side validation, thi
 
 On the other hand, we use client-side validation if we want to check the data on the browser (the client). This validation occurs before data is sent to the server. Different browsers implement client-side validation differently, but it leads to the same outcome.
 
-## 
+## Requiring an Input
+Sometimes we have fields in our ```<form>```s which are not optional, i.e. there must be information provided before we can submit it. To enforce this rule, we can add the ```required``` attribute to an ```<input>``` element.
+
+Take for example:
+```
+<form action="/example.html" method="POST">
+  <label for="allergies">Do you have any dietary restrictions?</label>
+  <br>
+  <input id="allergies" name="allergies" type="text" required>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+```
+This renders a text box, and if we try to submit the ```<form>``` without filling it out we get a requirement message.
+
+## Set a Minimum and Maximum
+Another built-in validation we can use is to assign a minimum or maximum value for a number field, e.g. ```<input type="number">``` and ```<input type="range">```. To set a minimum acceptable value, we use the ```min``` attribute and assign a value. On the flip side, to set a maximum acceptable value, we assign the ```max``` attribute a value. Let’s see this in code:
+```
+<form action="/example.html" method="POST">
+  <label for="guests">Enter # of guests:</label>
+  <input id="guests" name="guests" type="number" min="1" max="4">
+  <input type="submit" value="Submit">
+</form>
+```
+If a user tries to submit an input that is less than 1 a warning will appear.
+A similar message will appear if a user tries to input a number greater than 4.
+
+## Checking Text Length
+In the previous exercise, we were able to use ```min``` and ```max``` to set acceptable minimum and maximum values in a number field. But what about text fields? There are certainly cases where we wouldn’t want our users typing more than a certain number of characters (think about the character cap for messages on Twitter). We might even want to set a minimum number of characters. Conveniently, there are built-in HTML5 validations for these situations.
+
+To set a minimum number of characters for a text field, we add the ```minlength``` attribute and a value to set a minimum value. Similarly, to set the maximum number of characters for a text field, we use the ```maxlength``` attribute and set a maximum value. Let’s take a look at these attributes in code:
+```
+<form action="/example.html" method="POST">
+  <label for="summary">Summarize your feelings in less than 250 characters</label>
+  <input id="summary" name="summary" type="text" minlength="5" maxlength="250" required>
+  <input type="submit" value="Submit">
+</form>
+```
+If a user tries to submit the ```<form>``` with less than the set minimum, this a message will appear
+And if a user tries to type in more than the maximum allowed number of characters, they don’t get a warning message, but they can’t type it in!
+
+## Matching a Pattern
+In addition to checking the length of a text, we could also add a validation to check how the text was provided. For cases when we want user input to follow specific guidelines, we use the ```pattern``` attribute and assign it a regular expression, or regex. Regular expressions are a sequence of characters that make up a search pattern. If the input matches the regex, the form can be submitted.
+
+Let’s say we wanted to check for a valid credit card number (a 14 to 16 digit number). We could use the regex: ```[0-9]{14,16}``` which checks that the user provided only numbers and that they entered at least 14 digits and at most 16 digits.
+
+To add this to a form:
+```
+<form action="/example.html" method="POST">
+  <label for="payment">Credit Card Number (no spaces):</label>
+  <br>
+  <input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
+  <input type="submit" value="Submit">
+</form>
+```
+With the ```pattern``` in place, users can’t submit the ```<form>``` with a number that doesn’t follow the regex. When they try, they’ll see a validation message.
+
+## Matching a Pattern
+In addition to checking the length of a text, we could also add a validation to check how the text was provided. For cases when we want user input to follow specific guidelines, we use the pattern attribute and assign it a regular expression, or regex. Regular expressions are a sequence of characters that make up a search pattern. If the input matches the regex, the form can be submitted.
+
+Let’s say we wanted to check for a valid credit card number (a 14 to 16 digit number). We could use the regex: [0-9]{14,16} which checks that the user provided only numbers and that they entered at least 14 digits and at most 16 digits.
+
+To add this to a form:
+```
+<form action="/example.html" method="POST">
+  <label for="payment">Credit Card Number (no spaces):</label>
+  <br>
+  <input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
+  <input type="submit" value="Submit">
+</form>
+```
+With the pattern in place, users can’t submit the ```<form>``` with a number that doesn’t follow the regex. When they try, they’ll see a validation message.
+We might also want to limit to only letters and numbers (and not special characters like ! or @).
+To add this validation, add a pattern attribute and set it to: ```"[a-zA-Z0-9]+"``` in the ```<input>``` element.
+
+## Review
+Awesome job adding client-side validation to ```<form>```s!
+
+Let’s quickly recap:
+
+- Client-side validations happen in the browser before information is sent to a server.
+- Adding the ```required``` attribute to an input related element will validate that the input field has information in it.
+- Assigning a value to the ```min``` attribute of a number input element will validate an acceptable minimum value.
+- Assigning a value to the ```max``` attribute of a number input element will validate an acceptable maximum value.
+- Assigning a value to the ```minlength``` attribute of a text input element will validate an acceptable minimum number of characters.
+- Assigning a value to the ```maxlength``` attribute of a text input element will validate an acceptable maximum number of characters.
+- Assigning a regex to ```pattern``` matches the input to the provided regex.
+- If validations on a ```<form>``` do not pass, the user gets a message explaining why and the ```<form>``` cannot be submitted.
+These quick checks help ensure that input data is correct and safe for our servers. It also helps give users immediate feedback on what they need to fix instead of having to wait for a server to send back that information.
