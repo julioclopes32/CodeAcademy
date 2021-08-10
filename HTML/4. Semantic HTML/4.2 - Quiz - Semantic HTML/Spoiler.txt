@@ -1,0 +1,14 @@
+# 2.2 - Quiz - HTML Tables 
+Basic HTML Tables quiz.
+
+This is the Spoiler with the correct anshwers.
+
+Question 1 - a
+Question 2 - a
+Question 3 - b
+Question 4 - c
+Question 5 - d
+Question 6 - d
+Question 7 - b
+Question 8 - c
+Question 9 - d
