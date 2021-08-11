@@ -1,0 +1,17 @@
+# 1.4 - Quiz - Setup and Selectors
+Basic Setup and Selectors quiz.
+
+This is the Spoiler with the correct anshwers.
+
+Question 1 - <link href='main.css' rel='stylesheet'>
+Question 2 - a
+Question 3 - d
+Question 4 - b
+Question 5 - c
+Question 6 - d
+Question 7 - d
+Question 8 - d
+Question 9 - d
+Question 10 - d
+Question 11 - b
+Question 12 - b
