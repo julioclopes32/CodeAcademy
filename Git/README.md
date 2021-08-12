@@ -3,6 +3,15 @@ Learn to save and manage different versions of your code projects with this esse
 
 An introduction to Git and a few of its core features
 
+## What is git?
+Git is a is distributed version control system, created by Linus Torvalds, during the Lixux development.
+To explain it as simple as possible:
+Git stores a set of directory changes through the commits. The set of commits creates a history of changes during all the chronologic changes your repository has passed. That gives a clear path to go further or back through the versions.
+
+## What is the difference between Git, GitHub, GitBucket and GitLab.
+So, git is the version mechanism in itself. It's all the programming and code to make sure everything should work.
+GitHub, GitBucket and GitLab are platforms that host Git repositories, so it's a way to share your git projects.
+
 ## Why Learn Git?
 Ever have an “I lost all my work and I have a deadline the next day” moment? Git is the most popular version control tool—something that developers use to save all relevant versions of their work to avoid moments like those. Git also makes it easy for developers to collaborate and share work with others!
 

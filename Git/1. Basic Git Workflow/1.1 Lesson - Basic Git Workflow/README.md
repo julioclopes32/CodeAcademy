@@ -19,7 +19,7 @@ In order for Git to start tracking files, the file needs to be added to the stag
 
 We can add a file to the staging area with:
 ```Git
-git status
+git add
 ```
 
 ## git diff
