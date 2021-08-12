@@ -1,0 +1,16 @@
+# 3.4 - Quiz - The Box Model
+
+This is the Spoiler with the correct anshwers.
+
+Question 1 - b
+Question 2 - a
+Question 3 - a
+Question 4 - b
+Question 5 - b
+Question 6 - d
+Question 7 - b
+Question 8 - d
+Question 9 - c
+Question 10 - c
+Question 11 - c
+Question 12 - a
