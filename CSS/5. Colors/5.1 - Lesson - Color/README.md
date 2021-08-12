@@ -3,13 +3,17 @@
 ## Hexadecimal
 One syntax that we can use to specify colors is called hexadecimal. Colors specified using this system are called hex colors. A hex color begins with a hash character (#) which is followed by three or six characters. The characters represent values for red, blue and green.
 
-darkseagreen: #8FBC8F
-sienna:       #A0522D
-saddlebrown:  #8B4513
-brown:        #A52A2A
-black:        #000000 or #000
-white:        #FFFFFF or #FFF
-aqua:         #00FFFF or #0FF
+- darkseagreen: #8FBC8F
+- sienna:       #A0522D
+- saddlebrown:  #8B4513
+- brown:        #A52A2A
+
+## Short Hex
+Hex values with doubled digits for each color value can be shortened to three characters.
+
+- black:        #000000 or #000
+- white:        #FFFFFF or #FFF
+- aqua:         #00FFFF or #0FF
 
 ## RGB Colors
 There is another syntax for representing RGB values, commonly referred to as “RGB value” or just “RGB”, that uses decimal numbers rather than hexadecimal numbers, and it looks like this:
