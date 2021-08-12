@@ -45,10 +45,10 @@ In the example above, the element of green-box class will be moved down 50 pixel
 <img src="relative.png">
 Offsetting the relative element will not affect the positioning of other elements.
 
-## Position: Absolute
+## Position: Absolute (flying)
 Another way of modifying the position of an element is by setting its position to absolute.
 
-When an element’s position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. The element will be positioned relative to its closest positioned parent element, while offset properties can be used to determine the final position from there. Take a look at the image below:
+When an element’s position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page, like it is just flying. The element will be positioned relative to its closest positioned parent element, while offset properties can be used to determine the final position from there. Take a look at the image below:
 
 <img src="position-absolute.png">
 
