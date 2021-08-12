@@ -122,7 +122,7 @@ As you have seen, padding is space added inside an element’s border, while mar
 
 Horizontal margins (left and right), like padding, are always displayed and added together. For example, if two divs with ids #div-one and #div-two, are next to each other, they will be as far apart as the sum of their adjacent margins.
 <br>
-<img src="diagram-vertical.png">
+<img src="diagram-margins.png">
 <br>
 
 ## Minimum and Maximum Height and Width
