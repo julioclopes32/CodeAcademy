@@ -14,4 +14,4 @@ Before discussing the specifics of color, it’s important to make two distincti
 - The background color
 Foreground color is the color that an element appears in. For example, when a heading is styled to appear green, the foreground color of the heading has been styled.
 
-Conversely, when a heading is styled so that its background appears yellow, the background color of the heading has been styled
+Conversely, when a heading is styled so that its background appears yellow, the background color of the heading has been styled.
