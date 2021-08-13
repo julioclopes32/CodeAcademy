@@ -72,37 +72,6 @@ CREATE TABLE celebs (
 
 ## Other Commands
 
-### AVG()
-```
-SELECT AVG(column_name)
-FROM table_name;
-```
-```AVG()``` is an aggregate function that returns the average value for a numeric column.
-
-### COUNT()
-```
-SELECT COUNT(column_name)
-FROM table_name;
-```
-```COUNT()``` is a function that takes the name of a column as an argument and counts the number of rows where the column is not NULL.
-
-### GROUP BY
-```
-SELECT column_name, COUNT(*)
-FROM table_name
-GROUP BY column_name;
-```
-```GROUP BY``` is a clause in SQL that is only used with aggregate functions. It is used in collaboration with the ```SELECT``` statement to arrange identical data into groups.
-
-### HAVING
-```
-SELECT column_name, COUNT(*)
-FROM table_name
-GROUP BY column_name
-HAVING COUNT(*) > value;
-```
-```HAVING``` was added to SQL because the ```WHERE``` keyword could not be used with aggregate functions.
-
 ### INNER JOIN
 ```
 SELECT column_name(s)
@@ -112,20 +81,6 @@ JOIN table_2
 ```
 An ```inner join``` will combine rows from different tables if the join condition is true.
 
-### MAX()
-```
-SELECT MAX(column_name)
-FROM table_name;
-```
-```MAX()``` is a function that takes the name of a column as an argument and returns the largest value in that column.
-
-### MIN()
-```
-SELECT MIN(column_name)
-FROM table_name;
-```
-```MIN()``` is a function that takes the name of a column as an argument and returns the smallest value in that column.
-
 ### OUTER JOIN
 ```
 SELECT column_name(s)
@@ -134,20 +89,6 @@ LEFT JOIN table_2
   ON table_1.column_name = table_2.column_name;
 ```
 An outer join will combine rows from different tables even if the join condition is not met. Every row in the left table is returned in the result set, and if the join condition is not met, then ```NULL``` values are used to fill in the columns from the *right* table.
-
-### ROUND()
-```
-SELECT ROUND(column_name, integer)
-FROM table_name;
-```
-```ROUND()``` is a function that takes a column name and an integer as arguments. It rounds the values in the column to the number of decimal places specified by the integer.
-
-### SUM
-```
-SELECT SUM(column_name)
-FROM table_name;
-```
-```SUM()``` is a function that takes the name of a column as an argument and returns the sum of all the values in that column.
 
 ### WITH
 ```
