@@ -45,7 +45,6 @@ WHERE some_column = some_value;
 ```
 ```UPDATE``` statements allow you to edit rows in a table.
 
-
 ### DELETE
 ```
 DELETE FROM table_name
@@ -73,48 +72,12 @@ CREATE TABLE celebs (
 
 ## Other Commands
 
-### AND
-```
-SELECT column_name(s)
-FROM table_name
-WHERE column_1 = value_1
-  AND column_2 = value_2;
-```
-```AND``` is an operator that combines two conditions. Both conditions must be true for the row to be included in the result set.
-
-### AS
-```
-SELECT column_name AS 'Alias'
-FROM table_name;
-```
-```AS``` is a keyword in SQL that allows you to rename a column or table using an alias.
-
 ### AVG()
 ```
 SELECT AVG(column_name)
 FROM table_name;
 ```
 ```AVG()``` is an aggregate function that returns the average value for a numeric column.
-
-### BETWEEN
-```
-SELECT column_name(s)
-FROM table_name
-WHERE column_name BETWEEN value_1 AND value_2;
-```
-The ```BETWEEN``` operator is used to filter the result set within a certain range. The values can be numbers, text or dates.
-
-### CASE
-```
-SELECT column_name,
-  CASE
-    WHEN condition THEN 'Result_1'
-    WHEN condition THEN 'Result_2'
-    ELSE 'Result_3'
-  END
-FROM table_name;
-```
-```CASE``` statements are used to create different outputs (usually in the ```SELECT``` statement). It is SQL’s way of handling if-then logic.
 
 ### COUNT()
 ```
@@ -149,30 +112,6 @@ JOIN table_2
 ```
 An ```inner join``` will combine rows from different tables if the join condition is true.
 
-### IS NULL / IS NOT NULL
-```
-SELECT column_name(s)
-FROM table_name
-WHERE column_name IS NULL;
-```
-```IS NULL``` and ```IS NOT NULL``` are operators used with the ```WHERE``` clause to test for empty values.
-
-### LIKE
-```
-SELECT column_name(s)
-FROM table_name
-WHERE column_name LIKE pattern;
-```
-```LIKE``` is a special operator used with the WHERE clause to search for a specific pattern in a column.
-
-### LIMIT
-```
-SELECT column_name(s)
-FROM table_name
-LIMIT number;
-```
-```LIMIT``` is a clause that lets you specify the maximum number of rows the result set will have.
-
 ### MAX()
 ```
 SELECT MAX(column_name)
@@ -186,23 +125,6 @@ SELECT MIN(column_name)
 FROM table_name;
 ```
 ```MIN()``` is a function that takes the name of a column as an argument and returns the smallest value in that column.
-
-### OR
-```
-SELECT column_name
-FROM table_name
-WHERE column_name = value_1
-   OR column_name = value_2;
-```
-```OR``` is an operator that filters the result set to only include rows where either condition is true.
-
-### ORDER BY
-```
-SELECT column_name
-FROM table_name
-ORDER BY column_name ASC | DESC;
-```
-```ORDER BY``` is a clause that indicates you want to sort the result set by a particular column either alphabetically or numerically.
 
 ### OUTER JOIN
 ```
@@ -220,27 +142,12 @@ FROM table_name;
 ```
 ```ROUND()``` is a function that takes a column name and an integer as arguments. It rounds the values in the column to the number of decimal places specified by the integer.
 
-### SELECT DISTINCT
-```
-**SELECT DISTINCT** column_name
-FROM table_name;
-```
-```SELECT``` DISTINCT specifies that the statement is going to be a query that returns unique values in the specified column(s).
-
 ### SUM
 ```
 SELECT SUM(column_name)
 FROM table_name;
 ```
 ```SUM()``` is a function that takes the name of a column as an argument and returns the sum of all the values in that column.
-
-### WHERE
-```
-SELECT column_name(s)
-FROM table_name
-WHERE column_name operator value;
-```
-```WHERE``` is a clause that indicates you want to filter the result set to include only rows where the following condition is true.
 
 ### WITH
 ```
