@@ -1,0 +1,14 @@
+# 3.2 - Quiz - Aggregate Functions
+
+This is the Spoiler with the correct anshwers.
+
+Question 1 - b
+Question 2 - d
+Question 3 - a
+Question 4 - a
+Question 5 - d
+Question 6 - b
+Question 7 - a
+Question 8 - a
+Question 9 - b
+Question 10 - c
